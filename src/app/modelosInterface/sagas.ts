@@ -4,5 +4,5 @@ export interface Sagas {
     img: string;
     link: [{ ref: string, texto: string }];
     cols: number;
-    rows: number;
+    rows:  number;
 }
