@@ -1,3 +1,4 @@
+import { PerfilComponent } from './perfil/perfil.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
@@ -30,7 +31,7 @@ import { AppComponent } from './app.component';
 import { FeedComponent } from './feed/feed.component';
 import { NavegacaoComponent } from './navegacao/navegacao.component';
 import { AppCadastroComponent } from './app-cadastro/app-cadastro.component';
-import { PerfilComponent } from './perfil/perfil.component';
+import { AppNotFoundComponent } from './app-not-found/app-not-found.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { PerfilComponent } from './perfil/perfil.component';
     FeedComponent,
     AppLoginComponent,
     AppCadastroComponent,
+    AppNotFoundComponent,
     PerfilComponent
   ],
   imports: [

@@ -1,6 +1,6 @@
 import { Component, Inject } from '@angular/core';
 import { FormBuilder, FormControl, Validators } from '@angular/forms';
-import { MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { MatDialog, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { HotToastService } from '@ngneat/hot-toast';
 
@@ -22,6 +22,7 @@ export class AppLoginComponent {
   constructor(
     private loginBuilder: FormBuilder,
     @Inject(MAT_DIALOG_DATA) public conteudo:string,
+    private telaLogin: MatDialog,
     private toast: HotToastService,
     private rotas: Router,
     private autenticacaoFirebaseService: AutenticacaoFirebaseService
@@ -48,6 +49,7 @@ export class AppLoginComponent {
         })
       ).subscribe(()=>{
         this.rotas.navigate(['/cdd'])
+        this.telaLogin.closeAll();
       })
   }
 }

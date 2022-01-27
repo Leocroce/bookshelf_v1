@@ -4,6 +4,7 @@ import { FeedComponent } from './feed/feed.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { canActivate, redirectUnauthorizedTo, redirectLoggedInTo } from '@angular/fire/auth-guard';
+import { AppNotFoundComponent } from './app-not-found/app-not-found.component';
 
 const enviarSemLogin = () => redirectUnauthorizedTo(['/app-app-cadastro']);
 
@@ -27,6 +28,9 @@ const routes: Routes = [
     loadChildren: () => import('./cdd/cdd.module').then(c => c.CddModule),
     ...canActivate(enviarSemLogin)
   },
+  {
+    path: '**', component: AppNotFoundComponent,
+  }
 ];
 
 @NgModule({
