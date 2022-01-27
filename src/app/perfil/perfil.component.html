@@ -1,5 +1,11 @@
 <mat-card class="example-card">
-  <h1 class="mat-h1" *ngIf="usuario$ | async as usuario">Feed de notícias: {{usuario.displayName}}</h1>
-  <h2 class="mat-h2"></h2>
-
+  <h1>
+  </h1>
+  <hr/>
+  <p>
+    Este é o seu perfil principal. Ele não pode ser excluído
+  </p>
+  <mat-card>
+    <h2 class="mat-h1" *ngIf="usuario$ | async as usuario">Bem vindo de volta {{ usuario.displayName }}!</h2>
+  </mat-card>
 </mat-card>
