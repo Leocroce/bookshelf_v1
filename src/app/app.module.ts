@@ -31,6 +31,7 @@ import { FeedComponent } from './feed/feed.component';
 import { NavegacaoComponent } from './navegacao/navegacao.component';
 import { AppCadastroComponent } from './app-cadastro/app-cadastro.component';
 import { AppNotFoundComponent } from './app-not-found/app-not-found.component';
+import { RecaptchaModule } from 'ng-recaptcha';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,7 @@ import { AppNotFoundComponent } from './app-not-found/app-not-found.component';
     FeedComponent,
     AppLoginComponent,
     AppCadastroComponent,
-    AppNotFoundComponent
+    AppNotFoundComponent,
   ],
   imports: [
     BrowserModule,
@@ -65,7 +66,8 @@ import { AppNotFoundComponent } from './app-not-found/app-not-found.component';
     provideDatabase(() => getDatabase()),
     provideFirestore(() => getFirestore()),
     provideStorage(() => getStorage()),
-    HotToastModule.forRoot()
+    HotToastModule.forRoot(),
+    RecaptchaModule
   ],
   providers: [],
   bootstrap: [AppComponent]

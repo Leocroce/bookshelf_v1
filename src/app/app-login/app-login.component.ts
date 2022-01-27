@@ -17,6 +17,9 @@ export class AppLoginComponent {
     senha: new FormControl('', Validators.required)
   });
 
+  tentativa: number = 0;
+  captcha!:string
+
   hasUnitNumber=false;
 
   constructor(
@@ -37,6 +40,9 @@ export class AppLoginComponent {
     }
     loginFirebase(){
       if(!this.formularioLogin.valid){
+        this.tentativa ++
+        this.captcha = ''
+        console.log(this.tentativa)
         return;
       }
       const {email, senha} = this.formularioLogin.value;
@@ -48,8 +54,15 @@ export class AppLoginComponent {
           error: 'Algo deu errado, confira as informações'
         })
       ).subscribe(()=>{
+        this.tentativa = 0
         this.rotas.navigate(['/cdd'])
         this.telaLogin.closeAll();
+        console.log(this.tentativa)
       })
+  }
+  resolveRecaptcha(response : string){
+    this.captcha = response;
+    this.tentativa = 0;
+    console.log('Resolve Recaptcha', response);
   }
 }
