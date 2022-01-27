@@ -1,4 +1,3 @@
-import { AppNotFoundComponent } from './app-not-found/app-not-found.component';
 import { AppCadastroComponent } from './app-cadastro/app-cadastro.component';
 import { FeedComponent } from './feed/feed.component';
 import { NgModule } from '@angular/core';
@@ -22,9 +21,6 @@ const routes: Routes = [
     path: 'cdd',
     loadChildren: () => import('./cdd/cdd.module').then(c => c.CddModule),
     ...canActivate(enviarSemLogin)
-  },
-  {
-    path: '**', component: AppNotFoundComponent,
   }
 ];
 
