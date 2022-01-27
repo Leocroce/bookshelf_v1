@@ -1,0 +1,54 @@
+[
+  {
+    "titulo": "O Senhor dos Anéis",
+    "autor": "J. R. R. Tolkien",
+    "img": "https://muraldoslivros.com/wp-content/uploads/2021/03/O-Senhor-dos-Aneis-1.jpg",
+    "link": [
+      {
+        "ref": "https://muraldoslivros.com/melhores-sagas-de-livros/",
+        "texto": "O Senhor dos Anéis"
+      }
+    ],
+    "cols": 2,
+    "rows": 3
+  },
+  {
+    "titulo": "Harry Potter",
+    "autor": "J. K. Rowling",
+    "img": "https://muraldoslivros.com/wp-content/uploads/2021/03/Harry-Potter-1-1.jpg",
+    "link": [
+      {
+        "ref": "https://muraldoslivros.com/melhores-sagas-de-livros/",
+        "texto": "Harry Potter"
+      }
+    ],
+    "cols": 2,
+    "rows": 3
+  },
+  {
+    "titulo": "As Brumas de Avalon",
+    "autor": "Marion Zimmer Bradley",
+    "img": "https://muraldoslivros.com/wp-content/uploads/2021/03/As-Brumas-de-Avalon.jpg",
+    "link": [
+      {
+        "ref": "https://muraldoslivros.com/melhores-sagas-de-livros/",
+        "texto": "As Brumas de Avalon"
+      }
+    ],
+    "cols": 2,
+    "rows": 3
+  },
+  {
+    "titulo": "Outlander: A Viajante do Tempo",
+    "autor": "Diana Gabaldon",
+    "img": "https://muraldoslivros.com/wp-content/uploads/2021/03/Outlander-A-Viajante-do-Tempo.jpg",
+    "link": [
+      {
+        "ref": "https://muraldoslivros.com/melhores-sagas-de-livros/",
+        "texto": "Outlander: A Viajante do Tempo"
+      }
+    ],
+    "cols": 2,
+    "rows": 3
+  }
+]
