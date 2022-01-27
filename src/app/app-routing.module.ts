@@ -1,3 +1,4 @@
+import { PerfilComponent } from './perfil/perfil.component';
 import { AppCadastroComponent } from './app-cadastro/app-cadastro.component';
 import { FeedComponent } from './feed/feed.component';
 import { NgModule } from '@angular/core';
@@ -14,6 +15,10 @@ const routes: Routes = [
     path:'app-app-cadastro', component: AppCadastroComponent
   },
   {
+    path: 'perfil',
+    component: PerfilComponent,
+  },
+  {
     path: 'feed', component: FeedComponent,
     ...canActivate(enviarSemLogin)
   },
@@ -21,7 +26,7 @@ const routes: Routes = [
     path: 'cdd',
     loadChildren: () => import('./cdd/cdd.module').then(c => c.CddModule),
     ...canActivate(enviarSemLogin)
-  }
+  },
 ];
 
 @NgModule({
