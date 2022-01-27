@@ -1,3 +1,4 @@
+import { PerfilComponent } from './perfil/perfil.component';
 import { AppCadastroComponent } from './app-cadastro/app-cadastro.component';
 import { FeedComponent } from './feed/feed.component';
 import { NgModule } from '@angular/core';
@@ -13,6 +14,10 @@ const routes: Routes = [
   },
   {
     path:'app-app-cadastro', component: AppCadastroComponent
+  },
+  {
+    path: 'perfil',
+    component: PerfilComponent,
   },
   {
     path: 'feed', component: FeedComponent,

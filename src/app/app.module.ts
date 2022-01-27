@@ -1,3 +1,4 @@
+import { PerfilComponent } from './perfil/perfil.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
@@ -39,7 +40,8 @@ import { AppNotFoundComponent } from './app-not-found/app-not-found.component';
     FeedComponent,
     AppLoginComponent,
     AppCadastroComponent,
-    AppNotFoundComponent
+    AppNotFoundComponent,
+    PerfilComponent
   ],
   imports: [
     BrowserModule,
