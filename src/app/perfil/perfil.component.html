@@ -1,11 +1,15 @@
 <mat-card class="example-card">
-  <h1>
-  </h1>
-  <hr/>
-  <p>
-    Este é o seu perfil principal. Ele não pode ser excluído
-  </p>
+  <mat-nav-list *ngFor="let itemPerfil of itensPerfil$ | async; index as i">
+    <h1 mat-list-item *ngIf="itemPerfil.habP === true">{{itemPerfil.labelMenu}} do Usuário</h1>
+  </mat-nav-list>
+  <hr>
   <mat-card>
-    <h2 class="mat-h1" *ngIf="usuario$ | async as usuario">Bem vindo de volta {{ usuario.displayName }}!</h2>
+    <h2 class="mat-h2" *ngIf="usuario$ | async as usuario">Bem vindo de volta {{ usuario.displayName }}!</h2>
+    <h4>
+      Este é o seu perfil principal.
+    </h4>
+  </mat-card>
+  <mat-card>
+    <mat-card-title>Seu Email: </mat-card-title>
   </mat-card>
 </mat-card>
