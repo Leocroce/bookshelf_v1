@@ -8,5 +8,5 @@
   {"_idGenero":"6", "nomeGenero": "Tecnologia e Ciências Aplicadas", "decimalGenero":"00", "livrosGenero":325},
   {"_idGenero":"7", "nomeGenero": "Artes", "decimalGenero":"00", "livrosGenero":523},
   {"_idGenero":"8", "nomeGenero": "Literatura e Retórica", "decimalGenero":"00", "livrosGenero":655},
-  {"_idGenero":"9", "nomeGenero": "Geografia História e Biografia", "decimalGenero":"00", "livrosGenero":788}
+  {"_idGenero":"9", "nomeGenero": "Geografia, História e Biografia", "decimalGenero":"00", "livrosGenero":788}
 ]
