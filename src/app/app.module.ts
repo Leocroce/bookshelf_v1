@@ -35,6 +35,7 @@ import { AppNotFoundComponent } from './app-not-found/app-not-found.component';
 import { RecaptchaModule } from 'ng-recaptcha';
 import { DetalheSagaComponent } from './detalhe-saga/detalhe-saga.component';
 import { SagasComponent } from './sagas/sagas.component';
+import {MatStepperModule} from '@angular/material/stepper';
 
 @NgModule({
   declarations: [
@@ -68,6 +69,7 @@ import { SagasComponent } from './sagas/sagas.component';
     MatSelectModule,
     MatRadioModule,
     ReactiveFormsModule,
+    MatStepperModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),
     provideDatabase(() => getDatabase()),
