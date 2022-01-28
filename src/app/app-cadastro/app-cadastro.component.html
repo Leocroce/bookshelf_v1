@@ -1,23 +1,23 @@
 <mat-grid-list cols="1" [rowHeight]="'100px'" [gutterSize]="'1px'">
   <mat-grid-tile [colspan]="1" [rowspan]="1">Cadastro no BookShelf</mat-grid-tile>
-  <mat-card>
+  <!-- <mat-card>
     <img mat-card-image src="../../assets/imagens/cover2.png" alt="Cover do Cadastro de Usuários">
     <form [formGroup]="formularioCadastro" (ngSubmit)="enviaCadastro()">
       <mat-form-field>
-        <input matInput placeholder="Entre com seu nome" formControlName="nome">
+        <input matInput placeholder="Entre com seu nome" formControlName="nome" [value]="first">
         <mat-error *ngIf="nome?.errors?.['required']">Será necessário seu nome.</mat-error>
       </mat-form-field>
       <mat-form-field>
-        <input matInput placeholder="Email de Login" formControlName="email">
+        <input matInput placeholder="Email de Login" formControlName="email" [value]="second" >
         <mat-error *ngIf="email?.errors?.['required']">Será necessário informar um e-mail</mat-error>
         <mat-error *ngIf="email?.errors?.['email']">O formato do e-mail não é valido</mat-error>
       </mat-form-field>
       <mat-form-field>
-        <input matInput placeholder="Entre com senha" formControlName="senha" type="password">
+        <input matInput placeholder="Entre com senha" formControlName="senha" type="password" [value]="third">
         <mat-error *ngIf="senha?.errors?.['required']">Esqueceu a senha</mat-error>
       </mat-form-field>
       <mat-form-field>
-        <input matInput placeholder="Confirme a senha anterior" formControlName="confirmaSenha" type="password">
+        <input matInput placeholder="Confirme a senha anterior" formControlName="confirmaSenha" type="password" [value]="fourth">
         <mat-error *ngIf="senha?.errors?.['required']">Entre coma a confirmação</mat-error>
         <mat-error *ngIf="formularioCadastro.errors?.['senhaConfirmada']">Entre coma a confirmação</mat-error>
       </mat-form-field>
@@ -26,5 +26,73 @@
         <button mat-button color="primary">Fechar</button>
       </mat-card-footer>
     </form>
+  </mat-card> -->
+  <mat-card>
+    <img mat-card-image src="../../assets/imagens/cover2.png" alt="Cover do Cadastro de Usuários">
+    <mat-stepper #stepper>
+      <mat-step [stepControl]="formularioCadastro" errorMessage="Será necessário seu nome.">
+        <form [formGroup]="formularioCadastro" (ngSubmit)="enviaCadastro()">
+          <ng-template matStepLabel>Preencha com seu Nome</ng-template>
+          <mat-form-field appearance="fill">
+            <mat-label>Nome</mat-label>
+            <input matInput placeholder="Nome" formControlName="nome" required>
+          </mat-form-field>
+          <div>
+            <button mat-button matStepperNext>Avançar</button>
+          </div>
+        </form>
+      </mat-step>
+      <mat-step [stepControl]="formularioCadastro" errorMessage="Será necessário informar um e-mail.">
+        <form [formGroup]="formularioCadastro">
+          <ng-template matStepLabel>Preencha com seu e-mail</ng-template>
+          <mat-form-field appearance="fill">
+            <mat-label>Email</mat-label>
+            <input type="email" matInput placeholder="*****@gmail.com" formControlName="email"
+                   required>
+          </mat-form-field>
+          <div>
+            <button mat-button matStepperPrevious><mat-icon class="mat-18">arrow_back</mat-icon></button>
+            <button mat-button matStepperNext><mat-icon class="mat-18">arrow_forward</mat-icon></button>
+          </div>
+        </form>
+      </mat-step>
+        <mat-step [stepControl]="formularioCadastro" errorMessage="Será necessário uma senha.">
+          <form [formGroup]="formularioCadastro">
+            <ng-template matStepLabel>Preencha com sua Senha</ng-template>
+            <mat-form-field appearance="fill">
+              <mat-label>Senha</mat-label>
+              <input type="password" matInput placeholder="Senha" formControlName="senha" required>
+            </mat-form-field>
+            <div>
+              <button mat-button matStepperPrevious><mat-icon class="mat-18">arrow_back</mat-icon></button>
+              <button mat-button matStepperNext><mat-icon class="mat-18">arrow_forward</mat-icon></button>
+            </div>
+          </form>
+        </mat-step>
+        <mat-step [stepControl]="formularioCadastro" errorMessage="Será necessário confirmar senha.">
+          <form [formGroup]="formularioCadastro">
+            <ng-template matStepLabel>Confirmar Senha</ng-template>
+            <mat-form-field appearance="fill">
+              <mat-label>Confirmar Senha</mat-label>
+              <input type="password" matInput placeholder="Senha" formControlName="confirmaSenha" required>
+            </mat-form-field>
+            <div>
+              <button mat-button matStepperPrevious><mat-icon class="mat-18">arrow_back</mat-icon></button>
+              <button mat-button matStepperNext><mat-icon class="mat-18">arrow_forward</mat-icon></button>
+            </div>
+          </form>
+        </mat-step>
+        <mat-step>
+          <ng-template matStepLabel>Feito</ng-template>
+          <h3 *ngIf="formularioCadastro.valid">Clique em cadastrar.</h3>
+          <div>
+            <button class="inicio" color="accent" mat-button *ngIf="!formularioCadastro.valid" (click)="stepper.reset()">Início</button>
+            <p *ngIf="!formularioCadastro.valid">Por gentileza, verifique os dados informados.</p>
+          </div>
+        </mat-step>
+    </mat-stepper>
+    <mat-card-footer>
+      <button class="cadastrar" mat-button color="accent" type="submit" *ngIf="formularioCadastro.valid">Cadastrar</button>
+    </mat-card-footer>
   </mat-card>
 </mat-grid-list>
