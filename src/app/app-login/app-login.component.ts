@@ -49,9 +49,9 @@ export class AppLoginComponent {
       this.autenticacaoFirebaseService.loginUsuario(email, senha)
       .pipe(
         this.toast.observe({
-          success: 'Login valido, obrigado',
+          success: 'Login válido, obrigado',
           loading: 'Redirecionando...',
-          error: 'Algo deu errado, confira as informações'
+          error: 'Dados inválidos, por favor confirmar as informações!'
         })
       ).subscribe(()=>{
         this.formularioLogin.reset({email: '', senha: ''})
