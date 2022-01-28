@@ -36,6 +36,7 @@ import { RecaptchaModule } from 'ng-recaptcha';
 import { DetalheSagaComponent } from './detalhe-saga/detalhe-saga.component';
 import { SagasComponent } from './sagas/sagas.component';
 import {MatStepperModule} from '@angular/material/stepper';
+import { IsbnComponent } from './isbn/isbn.component';
 
 @NgModule({
   declarations: [
@@ -48,6 +49,7 @@ import {MatStepperModule} from '@angular/material/stepper';
     PerfilComponent,
     SagasComponent,
     DetalheSagaComponent,
+    IsbnComponent,
 
   ],
   imports: [

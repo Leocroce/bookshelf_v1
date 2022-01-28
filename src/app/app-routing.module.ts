@@ -1,3 +1,4 @@
+import { IsbnComponent } from './isbn/isbn.component';
 import { DetalheSagaComponent } from './detalhe-saga/detalhe-saga.component';
 import { SagasComponent } from './sagas/sagas.component';
 import { PerfilComponent } from './perfil/perfil.component';
@@ -33,7 +34,10 @@ const routes: Routes = [
     path: 'saga', component: DetalheSagaComponent,
     ...canActivate(enviarSemLogin)
   },
-
+  {
+    path: 'isbn', component: IsbnComponent,
+    ...canActivate(enviarSemLogin)
+  },
   {
     path: 'cdd',
     loadChildren: () => import('./cdd/cdd.module').then(c => c.CddModule),
