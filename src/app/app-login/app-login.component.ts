@@ -54,7 +54,7 @@ export class AppLoginComponent {
           error: 'Algo deu errado, confira as informações'
         })
       ).subscribe(()=>{
-        this.tentativa = 0
+        this.formularioLogin.reset({email: '', senha: ''})
         this.rotas.navigate(['/cdd'])
         this.telaLogin.closeAll();
         console.log(this.tentativa)
