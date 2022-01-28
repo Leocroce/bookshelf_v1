@@ -33,6 +33,8 @@ import { NavegacaoComponent } from './navegacao/navegacao.component';
 import { AppCadastroComponent } from './app-cadastro/app-cadastro.component';
 import { AppNotFoundComponent } from './app-not-found/app-not-found.component';
 import { RecaptchaModule } from 'ng-recaptcha';
+import { DetalheSagaComponent } from './detalhe-saga/detalhe-saga.component';
+import { SagasComponent } from './sagas/sagas.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +44,10 @@ import { RecaptchaModule } from 'ng-recaptcha';
     AppLoginComponent,
     AppCadastroComponent,
     AppNotFoundComponent,
-    PerfilComponent
+    PerfilComponent,
+    SagasComponent,
+    DetalheSagaComponent,
+
   ],
   imports: [
     BrowserModule,

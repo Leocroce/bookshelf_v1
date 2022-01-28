@@ -1,54 +1,230 @@
 [
   {
+    "id": 1,
     "titulo": "O Senhor dos Anéis",
     "autor": "J. R. R. Tolkien",
     "img": "https://muraldoslivros.com/wp-content/uploads/2021/03/O-Senhor-dos-Aneis-1.jpg",
+    "listaLivros": [
+      "O Silmarillion (1977)",
+      "Os Filhos de Húrin (2007)",
+      "Beren e Lúthien (2017)",
+      "A Queda de Gondolin (2018)",
+      "Contos Inacabados (1980)",
+      "O Hobbit (1937)",
+      "O Senhor dos Anéis: A Sociedade do Anel (1954) ",
+      "O Senhor dos Aneis: As duas torres (1954) ",
+      "O Senhor dos Anéis: O retorno do rei (1955)"
+    ],
     "link": [
       {
-        "ref": "https://muraldoslivros.com/melhores-sagas-de-livros/ ",
+        "ref": "/saga/",
         "texto": "O Senhor dos Anéis"
       }
     ],
-    "cols": 2,
-    "rows": 3
+    "cols": 1,
+    "rows": 2
   },
   {
+    "id": 2,
     "titulo": "Harry Potter",
     "autor": "J. K. Rowling",
     "img": "https://muraldoslivros.com/wp-content/uploads/2021/03/Harry-Potter-1-1.jpg",
+    "listaLivros": [
+      "Harry Potter e a Pedra Filosofal (1997);",
+      "Harry Potter e a Câmara Secreta (1998);",
+      "Harry Potter e o Prisioneiro de Azkaban (1999);",
+      "Harry Potter e o Cálice de Fogo (2000);",
+      "Harry Potter e a Ordem da Fênix (2003);",
+      "Harry Potter e o Enigma do Príncipe (2005);",
+      "Harry Potter e as Relíquias da Morte (2007); ",
+      "Harry Potter e a Criança Amaldiçoada (2016 "
+
+    ],
     "link": [
       {
-        "ref": "https://muraldoslivros.com/melhores-sagas-de-livros/",
+        "ref": "/saga/",
         "texto": "Harry Potter"
       }
     ],
-    "cols": 2,
-    "rows": 3
+    "cols": 1,
+    "rows": 2
   },
   {
+    "id": 3,
     "titulo": "As Brumas de Avalon",
     "autor": "Marion Zimmer Bradley",
     "img": "https://muraldoslivros.com/wp-content/uploads/2021/03/As-Brumas-de-Avalon.jpg",
+    "listaLivros": [
+      "A senhora da magia (2008/3)",
+      "A grande rainha (2008/3)",
+      "O gamo rei (2008/3)",
+      "O prisioneiro da árvore (2008/3)"
+    ],
     "link": [
       {
-        "ref": "https://muraldoslivros.com/melhores-sagas-de-livros/",
+        "ref": "/saga/",
         "texto": "As Brumas de Avalon"
       }
     ],
-    "cols": 2,
-    "rows": 3
+    "cols": 1,
+    "rows": 2
   },
   {
+    "id": 4,
     "titulo": "Outlander: A Viajante do Tempo",
     "autor": "Diana Gabaldon",
     "img": "https://muraldoslivros.com/wp-content/uploads/2021/03/Outlander-A-Viajante-do-Tempo.jpg",
+    "listaLivros": [
+      "Outlander: A Viajante do Tempo ",
+      "Outlander: A Libélula no Âmbar ;",
+      "Outlander: O Resgate no Mar;",
+      "Outlander: Os Tambores do Outono;",
+      "Outlander: A Cruz de Fogo;",
+      "Outlander: Um Sopro de Neve e Cinzas  ;",
+      "Outlander: Ecos do Futuro ; ",
+      "Outlander: escrito com o sangue do meu coração "
+    ],
     "link": [
       {
-        "ref": "https://muraldoslivros.com/melhores-sagas-de-livros/",
+        "ref": "/saga/",
         "texto": "Outlander: A Viajante do Tempo"
       }
     ],
-    "cols": 2,
-    "rows": 3
+    "cols": 1,
+    "rows": 2
+  },
+  {
+    "id": 5,
+    "titulo": "As Crônicas de Nárnia",
+    "autor": "C. S. Lewis",
+    "img": "https://muraldoslivros.com/wp-content/uploads/2021/03/As-Cronicas-de-Narnia.jpg",
+    "listaLivros": [
+      "As Crônicas de Nárnia – O Sobrinho do Mago",
+      "As Crônicas de Nárnia – O Leão, a Feiticeira e o Guarda-Roupa",
+      "As Crônicas de Nárnia – O Cavalo e Seu Menino",
+      "As Crônicas de Nárnia – Príncipe Caspian",
+      "As Crônicas de Nárnia – A Viagem do Peregrino da Alvorada",
+      "As Crônicas de Nárnia – A Cadeira de Prata",
+      "As Crônicas de Nárnia – A Última Batalha"
+    ],
+    "link": [
+      {
+        "ref": "/saga/",
+        "texto": "As Crônicas de Nárnia"
+      }
+    ],
+    "cols": 1,
+    "rows": 2
+  },
+  {
+    "id": 6,
+    "titulo": "O Guia do Mochileiro das Galáxias",
+    "autor": "Douglas Adams",
+    "img": "https://muraldoslivros.com/wp-content/uploads/2021/03/O-Guia-do-Mochileiro-das-Galaxias.jpg",
+    "listaLivros": [
+      "O Guia do mochileiro das Galáxias",
+      "O restaurante do fim do universo",
+      "A Vida, O Universo e Tudo Mais",
+      "Até mais, e obrigado pelos peixes",
+      "Praticamente Inofensiva",
+      "E tem outra coisa",
+      "O salmão da dúvida"
+    ],
+    "link": [
+      {
+        "ref": "/saga/",
+        "texto": "O Guia do Mochileiro das Galáxias"
+      }
+    ],
+    "cols": 1,
+    "rows": 2
+  },
+  {
+    "id": 7,
+    "titulo": "Mundo Novo",
+    "autor": "Chris Weitz",
+    "img": "https://muraldoslivros.com/wp-content/uploads/2021/03/Mundo-Novo.jpg",
+    "listaLivros": [
+      "Mundo novo",
+      "Nova ordem",
+      "Nova era"
+    ],
+    "link": [
+      {
+        "ref": "/saga/",
+        "texto": "Mundo Novo"
+      }
+    ],
+    "cols": 1,
+    "rows": 2
+  },
+  {
+    "id": 8,
+    "titulo": "Jogos Vorazes",
+    "autor": "Suzanne Collins",
+    "img": "https://muraldoslivros.com/wp-content/uploads/2021/03/Jogos-Vorazes-1.jpg",
+    "listaLivros": [
+      "A Cantiga dos Pássaros e das Serpentes",
+      "Jogos Vorazes",
+      "Jogos Vorazes: Em Chamas",
+      "Jogos Vorazes: A Esperança"
+    ],
+    "link": [
+      {
+        "ref": "/saga/",
+        "texto": "Jogos Vorazes"
+      }
+    ],
+    "cols": 1,
+    "rows": 2
+  },
+  {
+    "id": 9,
+    "titulo": "Assassins Creed",
+    "autor": "Oliver Bowden",
+    "img": "https://muraldoslivros.com/wp-content/uploads/2021/03/Assassins-Creed.jpg",
+    "listaLivros": [
+      "Assassin’s Creed: renascença (2011)",
+      "Assassin’s Creed: irmandade (2012)",
+      "Assassin’s Creed: a cruzada secreta (2012)",
+      "Assassin’s Creed: revelações (2012)",
+      "Assassin’s Creed: renegado (2012)",
+      "Assassin’s Creed: bandeira negra (2013)",
+      "Assassin’s Creed: unity (2014)",
+      "Assassin’s Creed: submundo (2015)"
+    ],
+    "link": [
+      {
+        "ref": "/saga/",
+        "texto": "Assassins Creed"
+      }
+    ],
+    "cols": 1,
+    "rows": 2
+  },
+  {
+    "id": 10,
+    "titulo": "The Witcher",
+    "autor": "Oliver Bowden",
+    "img": "https://images-na.ssl-images-amazon.com/images/I/41Yy6AbJXAL._SY344_BO1,204,203,200_QL70_ML2_.jpg",
+    "listaLivros": [
+      "O Último Desejo",
+      "A Espada do Destino",
+      "O Sangue dos Elfos",
+      "Tempo do Desprezo",
+      "Batismo de Fogo",
+      "A Torre da Andorinha",
+      "A Senhora do Lago",
+      "Tempo de Tempestade"
+    ],
+    "link": [
+      {
+        "ref": "/saga/",
+        "texto": "The Witcher"
+      }
+    ],
+    "cols": 1,
+    "rows": 2
   }
 ]
+

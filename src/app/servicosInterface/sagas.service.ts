@@ -20,7 +20,7 @@ export class SagasService {
     return this.cardsSagas.get<Sagas[]>(this.uriAPI)
     .pipe(
       first(),
-      tap(apiSagas => console.log(apiSagas))
+      tap(apiSagas => apiSagas)
     )
   }
 }

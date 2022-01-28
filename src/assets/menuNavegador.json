@@ -2,6 +2,7 @@
   {"linkMenu": "/cdd", "labelMenu":"Classes Dewey", "hab": true, "habP": false},
   {"linkMenu": "/feed", "labelMenu":"Feed Notícias", "hab": true, "habP": false},
   {"linkMenu": "/perfil", "labelMenu":"Perfil", "hab": true, "habP": true},
+  {"linkMenu": "/sagas", "labelMenu":"Sagas", "hab": true, "habP": true},
   {"linkMenu": "/clube", "labelMenu":"Pagina Usuário", "hab": false, "habP": false},
   {"linkMenu": "/leitura", "labelMenu":"Clubes de Leitura", "hab": false, "habP": false},
   {"linkMenu": "/estante", "labelMenu":"Estante Particular", "hab": false, "habP": false}

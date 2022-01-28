@@ -1,3 +1,5 @@
+import { DetalheSagaComponent } from './detalhe-saga/detalhe-saga.component';
+import { SagasComponent } from './sagas/sagas.component';
 import { PerfilComponent } from './perfil/perfil.component';
 import { AppCadastroComponent } from './app-cadastro/app-cadastro.component';
 import { FeedComponent } from './feed/feed.component';
@@ -23,6 +25,15 @@ const routes: Routes = [
     path: 'feed', component: FeedComponent,
     ...canActivate(enviarSemLogin)
   },
+  {
+    path: 'sagas', component: SagasComponent,
+    ...canActivate(enviarSemLogin)
+  },
+  {
+    path: 'saga', component: DetalheSagaComponent,
+    ...canActivate(enviarSemLogin)
+  },
+
   {
     path: 'cdd',
     loadChildren: () => import('./cdd/cdd.module').then(c => c.CddModule),

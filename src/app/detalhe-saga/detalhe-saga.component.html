@@ -1,0 +1,15 @@
+
+<mat-card class="example-card">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>{{saga.titulo}}</mat-card-title>
+    <mat-card-subtitle>{{saga.autor}}</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <p>Lista  de Livros</p>
+    <ol>
+      <li *ngFor="let item of saga.listaLivros">{{item}}</li>
+    </ol>
+  </mat-card-content>
+  <button mat-raised-button mat-dialog-close color="primary" routerLink="/sagas">Voltar</button>
+</mat-card>
