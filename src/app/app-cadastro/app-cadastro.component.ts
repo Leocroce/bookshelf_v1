@@ -72,7 +72,7 @@ export class AppCadastroComponent implements OnInit {
       .cadastrarUsuario(nome, email, senha)
       .subscribe({
         next: () => {
-          this.toast.loading('Enviando informações......', {
+          this.toast.loading('Enviando informações.....', {
             duration: 3000
           })
           this.toast.success('Cadatro executado, bem vindo ao BookShelf'),
