@@ -1,0 +1,74 @@
+[
+  {
+    "titulo": "Amor, Sublime Amor",
+    "subtitulo":"Os livros especiais do Mês.",
+    "img": "https://rollingstone.uol.com.br/media/uploads/2mefli9.jpg",
+    "conteudo":"Escrito por Irving Shulman, “Amor, Sublime Amor” é uma das histórias de amor mais prestigiadas da dramaturgia e do cinema norte-americano. A obra apresenta ao leitor Maria e Tony, dois jovens que se apaixonam perdidamente em um baile. No entanto, eles descobrem que fazem parte de duas realidades completamente diferentes e inconciliáveis. Maria é irmã do líder dos Sharks, uma gangue de imigrantes porto-riquenhos, enquanto Tony é ex-integrante e o melhor amigo do líder dos Jets, a gangue rival, formada por brancos norte-americanos.",
+    "link":[
+      {"ref":"https://pt.wikipedia.org/wiki/Irving_Shulman", "texto":"Irving Shulman"},
+      {"ref":"https://stringfixer.com/pt/Irving_Shulman","texto":"Bibliografia"}
+    ],
+    "cols": 1,
+    "rows": 2
+  },
+  {
+    "titulo": "A Garota na Neve",
+    "subtitulo":"Os livros especiais do Mês",
+    "img": "https://rollingstone.uol.com.br/media/uploads/3mefli9.jpg",
+    "conteudo":"Leitura ideal para os fãs de suspense, “A Garota na Neve” conta a história de Lucinda Hayes, aluna exemplar que é encontrada morta na neve. Ninguém pode ser considerado inocente, nem Cameron, o garoto que a amava demais e passava os dias a admirando de maneira obsessiva; Jae, a menina que a odiava, por ter roubado seu emprego e amigo; ou até mesmo Russ, o policial designado para investigar o caso.",
+    "link":[
+      {"ref":"https://www.danyakukafka.com/", "texto":"Danya Kukafka"},
+      {"ref":"https://www.bookreporter.com/authors/danya-kukafka","texto":"Bibliografia"}
+    ],
+    "cols": 1,
+    "rows": 2
+  },
+  {
+    "titulo": "O Sanatório",
+    "subtitulo":"Os livros especiais do Mês",
+    "img": "https://static.fnac-static.com/multimedia/Images/PT/NR/02/49/67/6768898/1507-1.jpg",
+    "conteudo":"Um resort isolado no alto dos Alpes Suíços é o último lugar em que Elin Warner gostaria de estar. No entanto, ao receber o convite para comemorar o noivado do irmão, a quem não vê há anos, ela resolve aceitar. Assim que chega, ela já se depara com uma onda de tensão. Além do relacionamento estremecido com o irmão, algo no hotel, que antes era um sanatório abandonado, a deixa nervosa.",
+    "link":[
+      {"ref":"https://www.bookreporter.com/authors/sarah-pearse", "texto":"Sarah Pearse"},
+      {"ref":"https://freshfiction.com/author.php?id=45627","texto":"Bibliografia"}
+    ],
+    "cols": 1,
+    "rows": 2
+  },
+  {
+    "titulo": "O Livro do Conforto",
+    "subtitulo":"Os livros especiais do Mês",
+    "img": "https://rollingstone.uol.com.br/media/uploads/6mefli9.jpg",
+    "conteudo":"Leitura ideal para quem está passando por momentos difíceis, “O Livro do Conforto” traz um compilado de reflexões, dicas e pequenas doses de esperança para inspirar, fazer refletir e ajudar os leitores a enxergarem novas maneiras de observar o mundo e a si mesmo.",
+    "link":[
+      {"ref":"https://literature.britishcouncil.org/writer/matt-haig", "texto":"Matt Haig"},
+      {"ref":"https://literature.britishcouncil.org/writer/matt-haig","texto":"Bibliografia"}
+    ],
+    "cols": 1,
+    "rows": 2
+  },
+  {
+    "titulo": "A morte é um dia que vale a pena viver",
+    "subtitulo":"Os livros especiais do Mês",
+    "img": "https://geekantenado.com/wp-content/uploads/2021/01/A-morte-e-um-dia-que-vale-a-pena-viver-E-um-excelente-motivo-para-se-buscar-um-novo-olhar-para-a-vida.jpg",
+    "conteudo":"A autora, neste livro, aborda o tema da finitude sob um ângulo surpreendente. Segundo ela, o que deveria nos assustar não é a morte em si, mas a possibilidade de chegarmos ao fim da vida sem aproveitá-la, de não usarmos nosso tempo da maneira que gostaríamos.",
+    "link":[
+      {"ref":"https://www.humanavida.com.br/dra-ana-claudia-quintana-arantes/", "texto":"Ana Claudia Quintana Arantes"},
+      {"ref":"https://sextante.com.br/autores/ana-claudia-quintana-arantes/","texto":"Bibliografia"}
+    ],
+    "cols": 1,
+    "rows": 2
+  },
+  {
+    "titulo": "Torto Arado",
+    "subtitulo":"Os livros especiais do Mês",
+    "img": "https://rollingstone.uol.com.br/media/uploads/7mefli9.jpg",
+    "conteudo":"O primeiro romance do escritor baiano Itamar Vieira Junior arrebatou uma série de prêmios importantes como o Jabuti de Literatura e o Prêmio Leya de Livro do Ano e foi lançado em 2019.Passado no sertão baiano em um contexto rural, conhecemos uma família de descendentes de escravos que segue sendo explorada - apesar da lei Áurea já ter sido assinada há mais de 100 anos, em 1888.",
+    "link":[
+      {"ref":"https://pt.wikipedia.org/wiki/Itamar_Vieira_Junior", "texto":"Itamar Vieira Junior"},
+      {"ref":"https://todavialivros.com.br/autores/itamar-vieira-junior","texto":"Bibliografia"}
+    ],
+    "cols": 1,
+    "rows": 2
+  }
+]
