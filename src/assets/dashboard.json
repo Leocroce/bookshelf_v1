@@ -8,8 +8,8 @@
       {"ref":"https://www.theenemy.com.br/social/criticas/review-the-witcher-temporada-2#:~:text=Honestamente%2C%20a%20breve%20apari%C3%A7%C3%A3o%20da,Ciri%20em%20termos%20de%20magia.", "texto":"The Enemy"},
       {"ref":"https://jovemnerd.com.br/nerdbunker/the-witcher-vale-a-pena-os-livros/","texto":"Jovem Nerd"}
     ],
-    "cols": 2,
-    "rows": 3
+    "cols": 3,
+    "rows": 9
   },
   {
     "titulo": "Dica de Livros: Ler e Pensar",
@@ -21,7 +21,7 @@
       {"ref":"https://www.pensador.com/livros_para_mudar_a_sua_vida/","texto":"O Pensador"}
     ],
     "cols": 1,
-    "rows": 2
+    "rows": 7
   },
   {
     "titulo": "Clube do Livro: Sugestões de Livros",
@@ -34,8 +34,8 @@
       {"ref":"https://teoriaedebate.org.br/estante/a-ditadura-envergonhada-v-1-a-ditadura-escancarada-v-2/","texto":"Teoria e Debate"},
       {"ref":"https://brasilescola.uol.com.br/literatura/capitu-traiu-bentinho.htm","texto":"Brasil Escola"}
     ],
-    "cols": 1,
-    "rows": 2
+    "cols": 2,
+    "rows": 7
   },
   {
     "titulo": "Educação e Leitura: Fundação Victor Civita",
@@ -48,7 +48,7 @@
       {"ref":"https://www.amazon.com.br/b?ie=UTF8&node=6311441011","texto":"Anazon Livros Gratuitos"}
     ],
     "cols": 1,
-    "rows": 2
+    "rows": 7
   },
   {
     "titulo": "Educação e Leitura: Fundação Victor Civita",
@@ -60,7 +60,7 @@
       {"ref":"https://www.revistabula.com/7802-os-melhores-livros-da-historia-da-literatura/","texto":"Revista Bula"},
       {"ref":"https://www.amazon.com.br/b?ie=UTF8&node=6311441011","texto":"Anazon Livros Gratuitos"}
     ],
-    "cols": 1,
-    "rows": 2
+    "cols": 2,
+    "rows": 7
   }
 ]
