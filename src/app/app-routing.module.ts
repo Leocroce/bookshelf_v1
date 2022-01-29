@@ -8,6 +8,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { canActivate, redirectUnauthorizedTo, redirectLoggedInTo } from '@angular/fire/auth-guard';
 import { AppNotFoundComponent } from './app-not-found/app-not-found.component';
+import { EspecialMesComponent } from './especial-mes/especial-mes.component';
 
 const enviarSemLogin = () => redirectUnauthorizedTo(['/app-app-cadastro']);
 
@@ -36,6 +37,10 @@ const routes: Routes = [
   },
   {
     path: 'isbn', component: IsbnComponent,
+    ...canActivate(enviarSemLogin)
+  },
+  {
+    path: 'especial', component: EspecialMesComponent,
     ...canActivate(enviarSemLogin)
   },
   {
