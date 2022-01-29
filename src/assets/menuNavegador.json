@@ -4,6 +4,7 @@
   {"linkMenu": "/perfil", "labelMenu":"Perfil", "hab": true, "habP": true},
   {"linkMenu": "/sagas", "labelMenu":"Sagas", "hab": true, "habP": false},
   {"linkMenu": "/isbn", "labelMenu":"ISBN", "hab": true, "habP": false},
+  {"linkMenu": "/especial", "labelMenu":"Especial do Mês", "hab": true, "habP": false},
   {"linkMenu": "/clube", "labelMenu":"Pagina Usuário", "hab": false, "habP": false},
   {"linkMenu": "/leitura", "labelMenu":"Clubes de Leitura", "hab": false, "habP": false},
   {"linkMenu": "/estante", "labelMenu":"Estante Particular", "hab": false, "habP": false}

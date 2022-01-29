@@ -1,0 +1,26 @@
+<div class="grid-container">
+  <h1 class="mat-h1">Livros Especiais do Mês de {{name}}</h1>
+  <mat-grid-list cols="2" rowHeight="520px">
+    <mat-grid-tile *ngFor="let noticiasCards of noticias$ | async" [colspan]="noticiasCards.cols" [rowspan]="noticiasCards.rows">
+      <mat-card class="noticias-card">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>{{noticiasCards.titulo}}</mat-card-title>
+          <mat-card-subtitle>{{noticiasCards.subtitulo}}</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image [src]="noticiasCards.img" [alt]="noticiasCards.titulo">
+        <mat-card-content class="dashboard-card-content">
+          <div>{{noticiasCards.conteudo}}</div>
+        </mat-card-content>
+        <mat-nav-list>
+          <mat-list-item *ngFor="let link of noticiasCards.link">
+            <a matLine [href]="link.ref">{{ link.texto }}</a>
+            <button mat-icon-button>
+              <mat-icon>info</mat-icon>
+            </button>
+          </mat-list-item>
+        </mat-nav-list>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
