@@ -64,21 +64,35 @@ export class AppCadastroComponent implements OnInit {
   }
 
   enviaCadastro() {
+    alert(`Vamos que vamos`);
     if (!this.formularioCadastro.valid) {
       return;
     }
     const { nome, email, senha } = this.formularioCadastro.value;
     this.autenticacaoFirebaseService
       .cadastrarUsuario(nome, email, senha)
-      .pipe(
-        this.toast.observe({
-          success: 'Cadatro executado, bem vindo ao BookShelf',
-          loading: 'Enviando informações...',
-          error: ({ message }) => `Houve um problema: #BS${message}`,
-        })
-      ).subscribe(() => {
-        this.rotas.navigate(['/'])
-      });
+      .subscribe({
+        next: () => {
+          this.toast.loading('Enviando informações......', {
+            duration: 3000
+          })
+          this.toast.success('Cadatro executado, bem vindo ao BookShelf'),
+          this.rotas.navigate(['/feed'])
+        },
+        error: (erro) => {
+          let mensagem = 'Message error';
+          switch (erro.code) {
+            case 'auth/email-already-in-use':
+              mensagem = `${erro.code}: Usuário já existe favor informar outro email`;
+              break;
+              case 'auth/weak-password':
+              mensagem = `${erro.code}: A senha deve ter pelo menos 6 characters `;
+              break;
+          }
+          this.toast.error(mensagem);
+        },
+      },
+      );
   }
   ngOnInit(): void {
   }
