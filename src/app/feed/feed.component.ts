@@ -5,6 +5,9 @@ import { Component } from '@angular/core';
 import { map } from 'rxjs/operators';
 import { Breakpoints, BreakpointObserver } from '@angular/cdk/layout';
 import { Observable, catchError, of } from 'rxjs';
+import { MatDialog } from '@angular/material/dialog';
+import { AppDialogosComponent } from '../app-compartilhado/app-dialogos/app-dialogos.component';
+
 
 @Component({
   selector: 'app-feed',
@@ -26,13 +29,21 @@ export class FeedComponent {
   constructor(
     private breakpointObserver: BreakpointObserver,
     private dashboardService: DashboardService,
-    private autenticacaoFirebaseService: AutenticacaoFirebaseService
+    private autenticacaoFirebaseService: AutenticacaoFirebaseService,
+    public dialogo: MatDialog
     ) {
       this.cards$ = dashboardService.listagemCards()
       .pipe(
         catchError(error =>{
+          this.abrirDialogoErro("Erro ao carregar o feed: #BS -"+error.status)
           return of([])
         })
       )
+    }
+
+    abrirDialogoErro(erroMsg: string){
+      this.dialogo.open(AppDialogosComponent,{
+        data: erroMsg
+      })
     }
 }
