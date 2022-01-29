@@ -64,7 +64,6 @@ export class AppCadastroComponent implements OnInit {
   }
 
   enviaCadastro() {
-    alert(`Vamos que vamos`);
     if (!this.formularioCadastro.valid) {
       return;
     }
