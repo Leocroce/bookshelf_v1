@@ -1,0 +1,38 @@
+<mat-card>
+  <div *ngIf=" direito$ | async as direito; else loading;">
+    <mat-toolbar color="accent">
+      <mat-icon >gavel</mat-icon>
+      <h1>Os maiores livros de Direito</h1>
+    </mat-toolbar>
+    <table mat-table [dataSource]="direito" class="mat-elevation-z8">
+
+        <ng-container matColumnDef="idDireito">
+          <th mat-header-cell *matHeaderCellDef> Nº </th>
+          <td mat-cell *matCellDef="let direito"> {{ direito.id }} </td>
+        </ng-container>
+
+      <ng-container matColumnDef="nomeDireito">
+        <th mat-header-cell *matHeaderCellDef> Título </th>
+        <td mat-cell *matCellDef="let direito"> {{ direito.titulo }} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="nomeAutor">
+        <th mat-header-cell *matHeaderCellDef> Autor(a) </th>
+        <td mat-cell *matCellDef="let direito"> {{ direito.autor }} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="imgDireito">
+        <th mat-header-cell *matHeaderCellDef> Capa </th>
+        <td mat-cell *matCellDef="let direito"> <img src='{{direito.img}}' width="150px"></td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="visaoColunas"></tr>
+      <tr mat-row *matRowDef="let row; columns: visaoColunas;"></tr>
+    </table>
+  </div>
+  <ng-template #loading>
+    <div class="loading-spinner">
+      <mat-spinner></mat-spinner>
+    </div>
+  </ng-template>
+</mat-card>
