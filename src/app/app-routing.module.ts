@@ -11,6 +11,7 @@ import { AppNotFoundComponent } from './app-not-found/app-not-found.component';
 import { EspecialMesComponent } from './especial-mes/especial-mes.component';
 import { EmpreendedorismoComponent } from './empreendedorismo/empreendedorismo.component';
 import { DireitoComponent } from './direito/direito.component';
+import { PsicologiaComponent } from './psicologia/psicologia.component';
 
 const enviarSemLogin = () => redirectUnauthorizedTo(['/app-app-cadastro']);
 
@@ -49,9 +50,12 @@ const routes: Routes = [
     path: 'empreendedorismo', component: EmpreendedorismoComponent,
     ...canActivate(enviarSemLogin)
   },
-
   {
     path: 'direito', component: DireitoComponent,
+    ...canActivate(enviarSemLogin)
+  },
+  {
+    path: 'psicologia', component: PsicologiaComponent,
     ...canActivate(enviarSemLogin)
   },
   {
