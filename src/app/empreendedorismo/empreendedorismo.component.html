@@ -1,0 +1,18 @@
+<div class="grid-container">
+  <h1 class="mat-h1" *ngIf="usuario$ | async as usuario">Melhores livros de Empreendedorismo para: {{usuario.displayName}}</h1>
+  <mat-grid-list cols="4" rowHeight="300px">
+    <mat-grid-tile *ngFor="let empCards of livrosEmpreendedorismo$ | async" [colspan]="empCards.cols" [rowspan]="empCards.rows">
+      <mat-card class="emp-card">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>{{empCards.titulo}}</mat-card-title>
+          <mat-card-subtitle>{{empCards.autor}}</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image [src]="empCards.img" [alt]="empCards.titulo">
+        <mat-card-content >
+          <div>{{empCards.sinopse}}</div>
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>

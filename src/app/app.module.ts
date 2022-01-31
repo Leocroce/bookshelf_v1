@@ -38,6 +38,7 @@ import { SagasComponent } from './sagas/sagas.component';
 import {MatStepperModule} from '@angular/material/stepper';
 import { IsbnComponent } from './isbn/isbn.component';
 import { EspecialMesComponent } from './especial-mes/especial-mes.component';
+import { EmpreendedorismoComponent } from './empreendedorismo/empreendedorismo.component';
 
 @NgModule({
   declarations: [
@@ -52,6 +53,7 @@ import { EspecialMesComponent } from './especial-mes/especial-mes.component';
     DetalheSagaComponent,
     IsbnComponent,
     EspecialMesComponent,
+    EmpreendedorismoComponent,
   ],
   imports: [
     BrowserModule,

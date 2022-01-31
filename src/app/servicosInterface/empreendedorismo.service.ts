@@ -13,7 +13,7 @@ export class EmpreendedorismoService {
   constructor(private cardsEmpreendedorismo: HttpClient) { }
 
   listagemCardsEmpreendedorismo() {
-    return this.cardsEmpreendedorismo.get<Empreendedorismo>(this.uriAPI)
+    return this.cardsEmpreendedorismo.get<Empreendedorismo[]>(this.uriAPI)
     .pipe(
       first(),
       tap(apiEmpreendedorismo => console.log(apiEmpreendedorismo))
