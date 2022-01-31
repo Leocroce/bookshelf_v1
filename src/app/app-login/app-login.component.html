@@ -5,7 +5,7 @@
       <mat-card-title>{{conteudo}}</mat-card-title>
     </mat-card-header>
     <img mat-card-image src="../../assets/imagens/4.png" alt="Banner de Login">
-    <mat-card-content *ngIf="tentativa < 3">
+    <mat-card-content>
       <form [formGroup]="formularioLogin" (ngSubmit)="loginFirebase()">
         <mat-form-field>
           <input matInput placeholder="Email de Login" formControlName="email">
@@ -17,17 +17,17 @@
           <mat-error *ngIf="senha?.errors?.['required']">Esqueceu a senha</mat-error>
         </mat-form-field>
         <mat-card-footer>
-          <button mat-raised-button color="accent" type="submit">Entrar</button>
+          <button mat-raised-button color="accent" type="submit" *ngIf="tentativa < 3">Entrar</button>
           <button mat-raised-button mat-dialog-close color="primary">Fechar</button>
         </mat-card-footer>
       </form>
-      <small *ngIf="tentativa > 0">Numero de tentativas de login: {{ tentativa }}</small>
+      <small *ngIf="tentativa > 0">Tentativas de Login: <b>{{ tentativa }} </b></small>
     </mat-card-content>
     <span>Você ainda <strong>não tem cadastro</strong> clique <a routerLink="/app-app-cadastro">aqui</a>
       e venha fazer parte desta comunidade de leitores</span>
   </mat-card>
 </div>
-<div [hidden]="captcha" *ngIf="tentativa >= 3">
+<div class="recaptcha" [hidden]="captcha" *ngIf="tentativa >= 3">
   <re-captcha (resolved)="resolveRecaptcha($event)" siteKey="6Le_6z8eAAAAALh5y8wBZ8W1xjVBGx4fC8DHMX13"></re-captcha>
 </div>
 <div [hidden]="!captcha"></div>

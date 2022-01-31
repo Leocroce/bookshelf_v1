@@ -44,7 +44,6 @@ export class AppLoginComponent {
     if (!this.formularioLogin.valid) {
       this.tentativa++;
       this.captcha = '';
-      console.log(this.tentativa);
       return;
     }
     const { email, senha } = this.formularioLogin.value;
@@ -58,8 +57,7 @@ export class AppLoginComponent {
           this.toast.loading('Redirecionando...', {
             duration: 2000
           }),
-          this.toast.success('Login válido, obrigado'),
-          console.log(this.tentativa);
+          this.toast.success('Login válido, obrigado')
         },
         error: (erro) => {
           let mensagem = 'Message error';
@@ -82,9 +80,8 @@ export class AppLoginComponent {
       this.captcha = '';
     }, 800);
   }
-  resolveRecaptcha(response: string) {
-    this.captcha = response;
+  resolveRecaptcha(resposta: string) {
+    this.captcha = resposta;
     this.tentativa = 0;
-    console.log('Resolve Recaptcha', response);
   }
 }
