@@ -4,6 +4,4 @@ export interface Psicologia {
   descricao: string;
   autor: string;
   img: string;
-  cols: number;
-  rows: number;
 }
