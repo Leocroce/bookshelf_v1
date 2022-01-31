@@ -7,6 +7,7 @@
   {"linkMenu": "/especial", "labelMenu":"Especial do Mês", "hab": true, "habP": false},
   {"linkMenu": "/empreendedorismo", "labelMenu":"Empreendedorismo", "hab": true, "habP": false},
   {"linkMenu": "/direito", "labelMenu":"Direito", "hab": true, "habP": false},
+  {"linkMenu": "/psicologia", "labelMenu":"Psicologia", "hab": true, "habP": false},
   {"linkMenu": "/clube", "labelMenu":"Pagina Usuário", "hab": false, "habP": false},
   {"linkMenu": "/leitura", "labelMenu":"Clubes de Leitura", "hab": false, "habP": false},
   {"linkMenu": "/estante", "labelMenu":"Estante Particular", "hab": false, "habP": false}

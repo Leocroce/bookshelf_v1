@@ -1,6 +1,6 @@
 <div class="grid-container">
-  <h1 class="mat-h1" *ngIf="usuario$ | async as usuario">Sagas: {{usuario.displayName}}</h1>
-  <mat-grid-list cols="2" rowHeight="300px">
+  <h1 class="mat-h1" *ngIf="usuario$ | async as usuario">10 principais sagas da literatura</h1>
+  <mat-grid-list cols="2" rowHeight="350px">
     <mat-grid-tile *ngFor="let card of cardsSagas$ | async" [colspan]="card.cols" [rowspan]="card.rows">
       <mat-card class="dashboard-card">
         <mat-card-header>

@@ -40,6 +40,7 @@ import { IsbnComponent } from './isbn/isbn.component';
 import { EspecialMesComponent } from './especial-mes/especial-mes.component';
 import { EmpreendedorismoComponent } from './empreendedorismo/empreendedorismo.component';
 import { DireitoComponent } from './direito/direito.component';
+import { PsicologiaComponent } from './psicologia/psicologia.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -55,6 +56,8 @@ import { DireitoComponent } from './direito/direito.component';
     EspecialMesComponent,
     EmpreendedorismoComponent,
     DireitoComponent,
+    PsicologiaComponent
+
   ],
   imports: [
     BrowserModule,
