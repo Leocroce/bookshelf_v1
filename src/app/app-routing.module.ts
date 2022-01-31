@@ -12,6 +12,7 @@ import { EspecialMesComponent } from './especial-mes/especial-mes.component';
 import { EmpreendedorismoComponent } from './empreendedorismo/empreendedorismo.component';
 import { DireitoComponent } from './direito/direito.component';
 import { PsicologiaComponent } from './psicologia/psicologia.component';
+import { ArtesComponent } from './artes/artes.component';
 
 const enviarSemLogin = () => redirectUnauthorizedTo(['/app-app-cadastro']);
 
@@ -20,7 +21,7 @@ const routes: Routes = [
     path: '', pathMatch: 'full', redirectTo: 'app-app-cadastro'
   },
   {
-    path:'app-app-cadastro', component: AppCadastroComponent
+    path: 'app-app-cadastro', component: AppCadastroComponent
   },
   {
     path: 'perfil',
@@ -56,6 +57,10 @@ const routes: Routes = [
   },
   {
     path: 'psicologia', component: PsicologiaComponent,
+    ...canActivate(enviarSemLogin)
+  },
+  {
+    path: 'artes', component: ArtesComponent,
     ...canActivate(enviarSemLogin)
   },
   {

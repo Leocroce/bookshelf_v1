@@ -35,12 +35,14 @@ import { AppNotFoundComponent } from './app-not-found/app-not-found.component';
 import { RecaptchaModule } from 'ng-recaptcha';
 import { DetalheSagaComponent } from './detalhe-saga/detalhe-saga.component';
 import { SagasComponent } from './sagas/sagas.component';
-import {MatStepperModule} from '@angular/material/stepper';
+import { MatStepperModule } from '@angular/material/stepper';
 import { IsbnComponent } from './isbn/isbn.component';
 import { EspecialMesComponent } from './especial-mes/especial-mes.component';
 import { EmpreendedorismoComponent } from './empreendedorismo/empreendedorismo.component';
 import { DireitoComponent } from './direito/direito.component';
 import { PsicologiaComponent } from './psicologia/psicologia.component';
+import { ArtesComponent } from './artes/artes.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -56,8 +58,8 @@ import { PsicologiaComponent } from './psicologia/psicologia.component';
     EspecialMesComponent,
     EmpreendedorismoComponent,
     DireitoComponent,
-    PsicologiaComponent
-
+    PsicologiaComponent,
+    ArtesComponent,
   ],
   imports: [
     BrowserModule,
