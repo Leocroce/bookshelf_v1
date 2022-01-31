@@ -9,6 +9,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { canActivate, redirectUnauthorizedTo, redirectLoggedInTo } from '@angular/fire/auth-guard';
 import { AppNotFoundComponent } from './app-not-found/app-not-found.component';
 import { EspecialMesComponent } from './especial-mes/especial-mes.component';
+import { EmpreendedorismoComponent } from './empreendedorismo/empreendedorismo.component';
 import { DireitoComponent } from './direito/direito.component';
 
 const enviarSemLogin = () => redirectUnauthorizedTo(['/app-app-cadastro']);
@@ -45,8 +46,7 @@ const routes: Routes = [
     ...canActivate(enviarSemLogin)
   },
   {
-    path: 'cdd',
-    loadChildren: () => import('./cdd/cdd.module').then(c => c.CddModule),
+    path: 'empreendedorismo', component: EmpreendedorismoComponent,
     ...canActivate(enviarSemLogin)
   },
 
@@ -54,7 +54,11 @@ const routes: Routes = [
     path: 'direito', component: DireitoComponent,
     ...canActivate(enviarSemLogin)
   },
-
+  {
+    path: 'cdd',
+    loadChildren: () => import('./cdd/cdd.module').then(c => c.CddModule),
+    ...canActivate(enviarSemLogin)
+  },
   {
     path: '**', component: AppNotFoundComponent,
   },
