@@ -1,4 +1,4 @@
-import { first, tap } from 'rxjs';
+import { first, tap, delay } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Criticas } from '../modelos/criticas';
@@ -8,7 +8,7 @@ import { Criticas } from '../modelos/criticas';
 })
 export class CriticasService {
 
-  private readonly urlAPI = '/src/assets/criticas.json'
+  private readonly urlAPI = '/assets/criticas.json'
 
   constructor(private criticas: HttpClient) { }
 
