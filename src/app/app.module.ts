@@ -39,7 +39,7 @@ import {MatStepperModule} from '@angular/material/stepper';
 import { IsbnComponent } from './isbn/isbn.component';
 import { EspecialMesComponent } from './especial-mes/especial-mes.component';
 import { EmpreendedorismoComponent } from './empreendedorismo/empreendedorismo.component';
-
+import { DireitoComponent } from './direito/direito.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -54,6 +54,7 @@ import { EmpreendedorismoComponent } from './empreendedorismo/empreendedorismo.c
     IsbnComponent,
     EspecialMesComponent,
     EmpreendedorismoComponent,
+    DireitoComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,3 @@
-import { EmpreendedorismoComponent } from './empreendedorismo/empreendedorismo.component';
 import { IsbnComponent } from './isbn/isbn.component';
 import { DetalheSagaComponent } from './detalhe-saga/detalhe-saga.component';
 import { SagasComponent } from './sagas/sagas.component';
@@ -10,6 +9,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { canActivate, redirectUnauthorizedTo, redirectLoggedInTo } from '@angular/fire/auth-guard';
 import { AppNotFoundComponent } from './app-not-found/app-not-found.component';
 import { EspecialMesComponent } from './especial-mes/especial-mes.component';
+import { DireitoComponent } from './direito/direito.component';
 
 const enviarSemLogin = () => redirectUnauthorizedTo(['/app-app-cadastro']);
 
@@ -45,17 +45,19 @@ const routes: Routes = [
     ...canActivate(enviarSemLogin)
   },
   {
-    path: 'empreendedorismo', component: EmpreendedorismoComponent,
-    ...canActivate(enviarSemLogin)
-  },
-  {
     path: 'cdd',
     loadChildren: () => import('./cdd/cdd.module').then(c => c.CddModule),
     ...canActivate(enviarSemLogin)
   },
+
+  {
+    path: 'direito', component: DireitoComponent,
+    ...canActivate(enviarSemLogin)
+  },
+
   {
     path: '**', component: AppNotFoundComponent,
-  }
+  },
 ];
 
 @NgModule({
