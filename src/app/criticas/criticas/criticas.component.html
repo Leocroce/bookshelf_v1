@@ -1,0 +1,21 @@
+  <div class="grid-container" *ngIf="cardsCriticas$ | async as Criticas">
+    <h1 class="mat-h1">Críticas classificadas por Gênero</h1>
+    <mat-grid-list cols="3" rowHeight="500px">
+      <mat-grid-tile *ngFor="let card of cardsCriticas$ | async" [colspan]="card.cols" [rowspan]="card.rows">
+        <mat-card class="dashboard-card">
+          <mat-card-header>
+            <mat-card-title>{{card.titulo}}</mat-card-title>
+            <mat-card-subtitle>{{card._nomeGenero}}</mat-card-subtitle>
+            <img mat-card-avatar [src]="card.thumbnail" [alt]="card.titulo">
+          </mat-card-header>
+          <mat-card-content class="dashboard-card-content">
+            <div>{{card.conteudo}}</div>
+          </mat-card-content>
+              <a matLine [href]="card.link">Mais informações</a>
+              <button mat-icon-button>
+                <mat-icon>info</mat-icon>
+              </button>
+        </mat-card>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
