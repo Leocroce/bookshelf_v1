@@ -77,6 +77,7 @@ export class AppCadastroComponent implements OnInit {
           })
           this.toast.success('Cadatro executado, bem vindo ao BookShelf'),
           this.rotas.navigate(['/feed'])
+          this.formularioCadastro.reset()
         },
         error: (erro) => {
           let mensagem = 'Message error';
