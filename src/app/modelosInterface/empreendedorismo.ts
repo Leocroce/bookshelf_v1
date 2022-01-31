@@ -5,5 +5,5 @@ export interface Empreendedorismo {
   sinopse: string;
   ano: number;
   cols: number;
-  row: number
+  rows: number
 }

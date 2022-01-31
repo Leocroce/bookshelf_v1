@@ -1,3 +1,4 @@
+import { EmpreendedorismoComponent } from './empreendedorismo/empreendedorismo.component';
 import { IsbnComponent } from './isbn/isbn.component';
 import { DetalheSagaComponent } from './detalhe-saga/detalhe-saga.component';
 import { SagasComponent } from './sagas/sagas.component';
@@ -41,6 +42,10 @@ const routes: Routes = [
   },
   {
     path: 'especial', component: EspecialMesComponent,
+    ...canActivate(enviarSemLogin)
+  },
+  {
+    path: 'empreendedorismo', component: EmpreendedorismoComponent,
     ...canActivate(enviarSemLogin)
   },
   {
