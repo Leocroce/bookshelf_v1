@@ -1,156 +1,72 @@
 [
   {
-    "titulo": "1 - A História da Arte",
+    "id":1,
+    "titulo": "A História da Arte",
     "autor": "E.H. Gombrich",
     "sinopse": "História da Arte para todos os públicos. Ernst Gombrich estabelece conhecimento e sabedoria sobre as mais antigas pinturas nas cavernas até a arte experimental contemporânea e promove um passeio fascinante e uma incomparável introdução à História da Arte.",
-    "img": "https://cdn2.grupogen.com.br/media/catalog/product/cache/9120b94d00c84e16879aa08d328e0a5b/9/7/9788521611851.png",
-    "link": [
-      {
-        "ref": "https://www.grupogen.com.br/a-historia-da-arte",
-        "texto": "A História da Arte"
-      }
-    ],
-    "cols": 2,
-    "rows": 3
+    "img": "https://cdn2.grupogen.com.br/media/catalog/product/cache/9120b94d00c84e16879aa08d328e0a5b/9/7/9788521611851.png"
   },
   {
-    "titulo": "2 - História da arte: do moderno ao contemporâneo",
+    "id":2,
+    "titulo": "História da arte: do moderno ao contemporâneo",
     "autor": " Ana Amália (Autor), José Minerini (Autor) ",
     "sinopse": "A Série Universitária foi desenvolvida pelo Senac São Paulo com o intuito de preparar profissionais para o mercado de trabalho. Os títulos abrangem diversas áreas, abordando desde conhecimentos teóricos e práticos adequados às exigências profissionais até a formação ética e sólida. História da arte: do moderno ao contemporâneo apresenta artistas e movimentos artísticos modernistas, assim como marcos no panorama da arte contemporânea, como o desenho industrial, o realismo, o simbolismo, o impressionismo, o expressionismo, o fauvismo, o cubismo, o futurismo, as abstrações russas, o dadaísmo e o surrealismo. Complementam a abordagem da contemporaneidade artística os temas moda, pop arte, performance e happening, minimalismo e conceitualismo, land art, novas mídias, neoexpressionismo, múltiplas narrativas, arte urbana e estética relacional. O objetivo é apresentar aquilo que de mais importante aconteceu na arte moderna e contemporânea ocidental.",
-    "img": "https://m.media-amazon.com/images/I/41DTZq7a9qL.jpg",
-    "link": [
-      {
-        "ref": "https://www.skoob.com.br/historia-da-arte-do-moderno-ao-contemporaneo-1211165ed1207079.html",
-        "texto": "História da arte: do moderno ao contemporâneo"
-      }
-    ],
-    "cols": 2,
-    "rows": 3
+    "img": "https://m.media-amazon.com/images/I/41DTZq7a9qL.jpg"
   },
   {
-    "titulo": "3 - A Arte e Seus Objetos",
+    "id":3,
+    "titulo": "A Arte e Seus Objetos",
     "autor": "Richard Wollheim",
     "sinopse": "O que define uma obra de arte e determina a nossa reação diante dela? No seu clássico estudo sobre a arte e seus objetos, Wollheim parte da hipótese de que a natureza da arte deve ser entendida simultaneamente do ponto de vista do artista e do ponto de vista do espectador. No desenvolvimento da tese Wollheim aborda questões fundamentais sobre a representação, a expressão, o estilo, o significado da intenção do artista e a natureza essencialmente histórica da obra de arte. Além do famoso textoA arte e seus objetos, esta edição traz ainda outros seis ensaios relacionados com as teorias da arte, a crítica, a representação, a percepção e a natureza dos valores estéticos, oferecendo uma clara e estimulante introdução ao estudo das obras de arte e o papel que elas desempenham na nossa cultura e na nossa sociedade.",
-    "img": "https://images-na.ssl-images-amazon.com/images/I/51FcmpBAK6L._SX362_BO1,204,203,200_.jpg",
-    "link": [
-      {
-        "ref": "https://www.emartinsfontes.com.br/arte-e-seus-objetos-a-p24253/",
-        "texto": "A Arte e Seus Objetos"
-      }
-    ],
-    "cols": 2,
-    "rows": 3
+    "img": "https://images-na.ssl-images-amazon.com/images/I/51FcmpBAK6L._SX362_BO1,204,203,200_.jpg"
   },
   {
-    "titulo": "4 - A imagem da mulher: um estudo da arte brasileira",
+    "id":4,
+    "titulo": "A imagem da mulher: um estudo da arte brasileira",
     "autor": "Cristina Costa",
     "sinopse": "Muitos foram os papéis sociais da mulher brasileira nos três últimos séculos. E as artes plásticas têm sido seu espelho, revelando retratos das mais variadas épocas. Sobretudo na pintura, podemos definir claramente o papel da mulher em diversos momentos da História nacional, por vezes nos surpreendendo com seu comportamento de vanguarda e suas conquistas em uma sociedade considerada patriarcal e machista. A autora nos conduz por um roteiro que espelha esses múltiplos papéis, em um trabalho minucioso e dedicado de resgate das representações femininas.",
-    "img": "https://www.rj.senac.br/wp-content/uploads/2018/07/a-imagem-da-mulher-um-estudo-de-arte-brasileira-2-305x437.jpg",
-    "link": [
-      {
-        "ref": "https://www.rj.senac.br/editora/livros/comunicacao-e-artes/a-imagem-da-mulher-um-estudo-de-arte-brasileira/",
-        "texto": "A imagem da mulher: um estudo da arte brasileira"
-      }
-    ],
-    "cols": 2,
-    "rows": 3
+    "img": "https://www.rj.senac.br/wp-content/uploads/2018/07/a-imagem-da-mulher-um-estudo-de-arte-brasileira-2-305x437.jpg"
   },
   {
-    "titulo": "5 - Tudo sobre arte",
+    "id":5,
+    "titulo": "Tudo sobre arte",
     "autor": "Stephen Farthing",
     "sinopse": "Abrangente e informativo, Tudo sobre arte será seu guia pelas imagens mais importantes de todos os tempos – aquelas que encontramos ao visitar museus, folhear jornais e revistas ou olhar para a capa de um romance. Organizado cronologicamente e repleto de ícones que encantaram o mundo, este livro traça um panorama da evolução artística em seus mais importantes estilos e movimentos, apresentando as obras emblemáticas da pintura, da escultura, da arte conceitual e da performática, além de análises detalhadas que facilitam sua compreensão.",
-    "img": "https://c5s9i6d5.stackpathcdn.com/wp-content/uploads/2019/03/TUDO-SOBRE-ARTE.png",
-    "link": [
-      {
-        "ref": "https://sextante.com.br/livros/tudo-sobre-arte/",
-        "texto": "Tudo sobre arte"
-      }
-    ],
-    "cols": 2,
-    "rows": 3
+    "img": "https://c5s9i6d5.stackpathcdn.com/wp-content/uploads/2019/03/TUDO-SOBRE-ARTE.png"
   },
   {
-    "titulo": "6 - Arte moderna no Brasil",
+    "id":6,
+    "titulo": "Arte moderna no Brasil",
     "autor": "Icleia Borsa Cattani",
     "sinopse": "Livro norteado por um objetivo didático, Arte Moderna no Brasil: Constituição e desenvolvimento nas artes visuais (1900-1950) traz em seu bojo uma operação complexa: conciliar a análise de poéticas individuais com o significado que estas irão adquirir no processo histórico-artístico brasileiro. Icléia Cattani demonstra ser capaz de levar adiante a operação com desenvoltura e segurança, apresentando um texto claro e enxuto, além de instigante.",
-    "img": "https://images-na.ssl-images-amazon.com/images/I/51--dJm6GfL._SX331_BO1,204,203,200_.jpg",
-    "link": [
-      {
-        "ref": "https://www.travessa.com.br/arte-moderna-no-brasil-constituicao-e-desenvolvimento-nas-artes-visuais-1900-1950-1-ed-2011/artigo/38bc407e-b0d2-47f9-b3cc-965604c6bca4",
-        "texto": "Arte moderna no Brasil"
-      }
-    ],
-    "cols": 2,
-    "rows": 3
+    "img": "https://images-na.ssl-images-amazon.com/images/I/51--dJm6GfL._SX331_BO1,204,203,200_.jpg"
   },
   {
-    "titulo": "6 - Arte moderna no Brasil",
-    "autor": "Icleia Borsa Cattani",
-    "sinopse": "Livro norteado por um objetivo didático, Arte Moderna no Brasil: Constituição e desenvolvimento nas artes visuais (1900-1950) traz em seu bojo uma operação complexa: conciliar a análise de poéticas individuais com o significado que estas irão adquirir no processo histórico-artístico brasileiro. Icléia Cattani demonstra ser capaz de levar adiante a operação com desenvoltura e segurança, apresentando um texto claro e enxuto, além de instigante.",
-    "img": "https://images-na.ssl-images-amazon.com/images/I/51--dJm6GfL._SX331_BO1,204,203,200_.jpg",
-    "link": [
-      {
-        "ref": "https://www.travessa.com.br/arte-moderna-no-brasil-constituicao-e-desenvolvimento-nas-artes-visuais-1900-1950-1-ed-2011/artigo/38bc407e-b0d2-47f9-b3cc-965604c6bca4",
-        "texto": "Arte moderna no Brasil"
-      }
-    ],
-    "cols": 2,
-    "rows": 3
-  },
-  {
-    "titulo": "7 - Breve historia da arte moderna",
+    "id":7,
+    "titulo": "Breve historia da arte moderna",
     "autor": "Susie Hodge",
     "sinopse": "Breve história da arte moderna é uma introdução nova e criativa ao tema da arte moderna. Elaborado de modo inteligente e ilustrado ricamente, o livro explora 50 obras-chave, desde os primeiros exemplos do modernismo até a arte contemporânea. De maneira prática e concisa, descubra como e por que a arte moderna se desenvolveu, quem foram os artistas inovadores, quais foram suas criações, onde e quando elas ocorreram. O texto apresenta muitas imagens icônicas e revela as diferentes técnicas usadas para criá-las. Desmitificando o jargão técnico, a autora oferece ao leitor um conhecimento profundo para uma plena apreciação da arte moderna, do final do século XIX até os dias de hoje",
-    "img": "https://images-na.ssl-images-amazon.com/images/I/51EI1TCkRML._SX351_BO1,204,203,200_.jpg",
-    "link": [
-      {
-        "ref": "https://editorialgg.com/breve-historia-da-arte-moderna-livro.html",
-        "texto": "Breve historia da arte moderna"
-      }
-    ],
-    "cols": 2,
-    "rows": 3
+    "img": "https://images-na.ssl-images-amazon.com/images/I/51EI1TCkRML._SX351_BO1,204,203,200_.jpg"
   },
   {
-    "titulo": "8 - O fim da história da Arte",
+    "id":8,
+    "titulo": "O fim da história da Arte",
     "autor": "Hans Belting",
     "sinopse": "Este livro traz dois ensaios onde Hans Belting - um dos maiores pensadores das artes visuais da atualidade - articula questões centrais para a reflexão sobre a história da arte. Para o autor, é preciso reformular a 'ciência das artes' para uma abordagem que evite o maior pecado de um historiador: o anacronismo. A história da arte, tal como era contada, aparece para ele como um 'equívoco ocidental', que trata o desenvolvimento de algumas correntes da produção visual de uma determinada cultura como uma narrativa única e universal. O autor propõe uma revisão das concepções da pesquisa em um novo modo de encarar esses fenômenos e chamá-los pelo nome que eles têm. Dentro desta perspectiva, Belting nos oferece um amplo panorama da produção em história da arte, problematiza algumas peculiaridades da arte contemporânea, tenta entender as peculiaridades dos museus ontem e hoje e nos sugere 'uma nova e mais abrangente história da imagem'. O volume inclui ainda um conjunto de imagens que, apresentadas sem encadeamento linear, constituem um discurso em si mesmo, num íntimo diálogo com os textos.",
-    "img": "https://secureservercdn.net/192.169.221.188/fa1.994.myftpupload.com/wp-content/uploads/2020/01/o-fim-da-.jpg",
-    "link": [
-      {
-        "ref": "https://www.travessa.com.br/o-fim-da-historia-da-arte-uma-revisao-dez-anos-depois-1-ed-2006/artigo/a2bbb847-d38f-4707-bed4-5fb28f8591a1",
-        "texto": "O fim da história da Arte"
-      }
-    ],
-    "cols": 2,
-    "rows": 3
+    "img": "https://secureservercdn.net/192.169.221.188/fa1.994.myftpupload.com/wp-content/uploads/2020/01/o-fim-da-.jpg"
   },
   {
-    "titulo": "9 - Arte Comentada",
+    "id":9,
+    "titulo": "Arte Comentada",
     "autor": "Lisa Strickland ",
     "sinopse": "Arte comentada tira a história da arte do domínio dos manuais enfadonhos, conduzindo-a a um mundo com apresentação dinâmica, ensaios sucintos de uma página e explicações em colunas separadas. Uma breve revisão de legendas e colunas laterais fornece um curso relâmpago de história da arte. Assim, incorporando mais de trezentas ilustrações, Arte comentada busca nos próprios elementos da arte – composição, movimento, equilíbrio, cor e desenho. De Stonehenge ao Guggenheim, de Holbein a Warhol, a linguagem da arte é clarificada em cinco seções.",
-    "img": "https://secureservercdn.net/192.169.221.188/fa1.994.myftpupload.com/wp-content/uploads/2020/01/arte-comentada.jpg",
-    "link": [
-      {
-        "ref": "https://www.amazon.com.br/Arte-Comentada-Carol-Strickland/dp/8520936660/ref=as_li_ss_tl?_encoding=UTF8&pd_rd_i=8520936660&pd_rd_r=6a122d8b-8a30-4352-8291-d8698692178a&pd_rd_w=M19bw&pd_rd_wg=mFfro&pf_rd_p=99d7b8c6-70e7-40d2-8359-1fc845484df3&pf_rd_r=8M7TT30MM0F6CHR33EX6&psc=1&refRID=8M7TT30MM0F6CHR33EX6&linkCode=sl1&tag=livroecafe-20&linkId=22c3571ca04e7456a219170c706df31c&language=en_US",
-        "texto": "Arte Comentada"
-      }
-    ],
-    "cols": 2,
-    "rows": 3
+    "img": "https://secureservercdn.net/192.169.221.188/fa1.994.myftpupload.com/wp-content/uploads/2020/01/arte-comentada.jpg"
   },
   {
-    "titulo": "10 - Looking at picture",
+    "id":10,
+    "titulo": "Looking at picture",
     "autor": "Robert Walser",
     "sinopse": "Um livro do escritor Robert Walser merece ser lido! “Looking at Pictures” apresenta um lado pouco conhecido do excêntrico gênio suíço: seus grandes escritos sobre arte. Seus ensaios consideram Van Gogh, Cézanne, Rembrandt, Cranach, Watteau, Fragonard, Brueghel e seu próprio irmão Karl e também discutem tópicos gerais, como o caráter do artista e do diletante, bem como as diferenças entre pintores e poetas. Portanto, cada peça é marcada pelo olho único de Walser e sua delicada sensibilidade.”",
-    "img": "https://secureservercdn.net/192.169.221.188/fa1.994.myftpupload.com/wp-content/uploads/2020/01/looking-at.jpg",
-    "link": [
-      {
-        "ref": "https://www.amazon.com.br/Looking-at-Pictures-Robert-Walser/dp/0811224244/ref=as_li_ss_tl?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&keywords=looking+at+the+picture&qid=1578655630&sr=8-5&linkCode=sl1&tag=livroecafe-20&linkId=9fd65f4bdf6775984d010f806e214b1f&language=en_US",
-        "texto": "Looking at picture"
-      }
-    ],
-    "cols": 2,
-    "rows": 3
+    "img": "https://secureservercdn.net/192.169.221.188/fa1.994.myftpupload.com/wp-content/uploads/2020/01/looking-at.jpg"
   }
 ]
