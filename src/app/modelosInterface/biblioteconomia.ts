@@ -1,5 +1,5 @@
 export interface Biblioteconomia {
-  
+
   titulo: string;
   autor: string;
   sinopse: string;

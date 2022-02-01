@@ -12,6 +12,7 @@
   {"linkMenu": "/criticas", "labelMenu":"Críticas", "hab": true, "habP": false},
   {"linkMenu": "/sugestoes", "labelMenu":"Sugestões", "hab": true, "habP": false},
   {"linkMenu": "/teatro", "labelMenu":"Teatro", "hab": true, "habP": false},
+  {"linkMenu": "/mais-vendidos", "labelMenu":"Os mais vendidos", "hab": true, "habP": false},
   {"linkMenu": "/clube", "labelMenu":"Pagina Usuário", "hab": false, "habP": false},
   {"linkMenu": "/leitura", "labelMenu":"Clubes de Leitura", "hab": false, "habP": false},
   {"linkMenu": "/estante", "labelMenu":"Estante Particular", "hab": false, "habP": false}
