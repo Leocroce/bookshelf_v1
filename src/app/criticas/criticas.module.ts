@@ -1,3 +1,4 @@
+import { ReactiveFormsModule } from '@angular/forms';
 import { AppCompartilhadoModule } from './../app-compartilhado/app-compartilhado.module';
 import { AppMaterialModule } from './../app-compartilhado/app-material/app-material.module';
 import { CriticasRoutingModule } from './criticas-routing.module';
@@ -17,7 +18,8 @@ import { CriticasDialogoComponent } from './dialogos/criticas-dialogo/criticas-d
     CommonModule,
     CriticasRoutingModule,
     AppMaterialModule,
-    AppCompartilhadoModule
+    AppCompartilhadoModule,
+    ReactiveFormsModule
   ]
 })
 export class CriticasModule { }
