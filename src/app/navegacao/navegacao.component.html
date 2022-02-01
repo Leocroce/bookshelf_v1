@@ -23,8 +23,9 @@
         <img mat-card-sm-image [width]="lIcone" [height]="aIcone" [src]="iconeGeral">
       </a>
       <ng-container *ngIf="usuario$ | async as usuario; else botaoLogin">
+        <ng-container ></ng-container>
         <button mat-raised-button color="primary" [matMenuTriggerFor]="usuarioMenu">
-          <mat-icon class="mat-18">local_library</mat-icon>
+          <img class="fotoPerfil" src= {{usuario.photoURL}} alt="foto de perfil">
           {{usuario.displayName}}
           <mat-icon>expand_more</mat-icon>
         </button>
