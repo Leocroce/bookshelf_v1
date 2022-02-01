@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { first, tap } from 'rxjs';
+import { first, tap, map } from 'rxjs';
 
 import { Sugestoes } from './../modelosInterface/sugestoes';
 
@@ -18,6 +18,12 @@ export class SugestoesService {
     return this.cartaosugestoes.get<Sugestoes[]>(this.uriAPI).pipe(
       first(),
       tap(apiSugestoes => console.log(apiSugestoes))
+    )
+  }
+
+  pesquisarSugestoes(query: string) {
+    return this.cartaosugestoes.get<Sugestoes[]>(this.uriAPI).pipe(
+      map((resp) => resp.find(g => (g.titulo.toLowerCase()).startsWith(query.toLowerCase())))
     )
   }
 
