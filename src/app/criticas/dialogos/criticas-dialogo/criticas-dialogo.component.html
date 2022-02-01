@@ -1,0 +1,18 @@
+<div mat-dialog-content>
+  <mat-card class="example-card"  *ngIf="cardsCriticas$ | async as Criticas">
+    <mat-grid-list cols="1" rows="1">
+    <mat-card-header>
+      <mat-grid-tile *ngFor="let card of cardsCriticas$ | async">
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>{{card.titulo}}</mat-card-title>
+    </mat-grid-tile>
+    </mat-card-header>
+    <img mat-card-image src="../../assets/imagens/4.png" alt="Banner de Login">
+    <mat-card-content>
+    </mat-card-content>
+    <span>Você ainda <strong>não tem cadastro</strong> clique <a routerLink="/app-app-cadastro">aqui</a>
+      e venha fazer parte desta comunidade de leitores</span>
+
+    </mat-grid-list>
+  </mat-card>
+</div>
