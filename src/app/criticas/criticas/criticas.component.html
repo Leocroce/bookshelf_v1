@@ -1,4 +1,34 @@
-  <div class="grid-container" *ngIf="cardsCriticas$ | async as Criticas">
+<div class="search-area">
+  <p>
+    <mat-form-field class="buscar" appearance="fill">
+      <mat-label>Procurar</mat-label>
+      <input matInput #searchInput/>
+      <mat-icon matSuffix>search</mat-icon>
+    </mat-form-field>
+  </p>
+  <div *ngIf="resultado$ | async as resultado">
+    <mat-card class="resultado">
+      <mat-card-header>
+        <mat-card-title>Resultado da busca: </mat-card-title>
+      </mat-card-header>
+      <div class="cartaoBusca">
+        <mat-card-header>
+          <mat-card-title>{{resultado.titulo}}</mat-card-title>
+          <mat-card-subtitle>{{resultado._nomeGenero}}</mat-card-subtitle>
+          <img mat-card-avatar [src]="resultado.thumbnail" [alt]="resultado.titulo">
+        </mat-card-header>
+        <mat-card-content class="dashboard-card-content">
+          <div>{{resultado.conteudo}}</div>
+        </mat-card-content>
+        <button mat-raised-button color="primary" (click)="abrirDialogoCriticas(resultado.titulo)">
+          Mais informações
+        <mat-icon>info</mat-icon>
+        </button>
+      </div>
+    </mat-card>
+  </div>
+<mat-card>
+<div class="grid-container" *ngIf="cardsCriticas$ | async as Criticas">
     <h1 class="mat-h1">Críticas classificadas por Gênero</h1>
     <mat-grid-list cols="3" rowHeight="500px">
       <mat-grid-tile *ngFor="let card of cardsCriticas$ | async" [colspan]="card.cols" [rowspan]="card.rows">
@@ -14,7 +44,7 @@
             <button mat-raised-button color="primary" (click)="abrirDialogoCriticas(card.titulo)">
               Mais informações
             <mat-icon>info</mat-icon>
-              </button>
+            </button>
         </mat-card>
       </mat-grid-tile>
     </mat-grid-list>

@@ -27,4 +27,11 @@ export class CriticasService {
       map(crit => crit.find(crit => crit.titulo === titulo))
     )
   }
+
+  pesquisar(query: string) {
+    return this.criticas.get<Criticas[]>(this.urlAPI)
+    .pipe(
+      map((resp) => resp.find(g => (g.titulo.toLowerCase()).startsWith(query.toLowerCase())))
+    )
+  }
 }
