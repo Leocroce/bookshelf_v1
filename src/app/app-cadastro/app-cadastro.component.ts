@@ -38,6 +38,7 @@ export class AppCadastroComponent implements OnInit {
     email: new FormControl('', [Validators.required, Validators.email]),
     senha: new FormControl('', Validators.required),
     confirmaSenha: new FormControl('', Validators.required),
+    urlFoto: new FormControl('', Validators.required)
   }, { validators: passwordMatchValidator() });
 
   constructor(
@@ -63,13 +64,17 @@ export class AppCadastroComponent implements OnInit {
     return this.formularioCadastro.get('confirmaSenha')
   }
 
+  get url() {
+    return this.formularioCadastro.get('urlFoto')
+  }
+
   enviaCadastro() {
     if (!this.formularioCadastro.valid) {
       return;
     }
-    const { nome, email, senha } = this.formularioCadastro.value;
+    const { nome, email, senha, urlFoto } = this.formularioCadastro.value;
     this.autenticacaoFirebaseService
-      .cadastrarUsuario(nome, email, senha)
+      .cadastrarUsuario(nome, email, senha, urlFoto)
       .subscribe({
         next: () => {
           this.toast.loading('Enviando informações.....', {
