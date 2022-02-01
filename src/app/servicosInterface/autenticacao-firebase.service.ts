@@ -22,6 +22,7 @@ export class AutenticacaoFirebaseService {
     sairLogin(){
       return from(this.usuarioFb.signOut());
     }
+    
 
     cadastrarUsuario(nome: string, email: string, senha: string, urlFoto: string){
       return from(createUserWithEmailAndPassword(this.usuarioFb, email, senha, )).pipe(
