@@ -56,6 +56,19 @@
               </div>
             </form>
           </mat-step>
+          <mat-step [stepControl]="formularioCadastro" errorMessage="Será necessário adicionar a URL da foto.">
+            <form [formGroup]="formularioCadastro">
+              <ng-template matStepLabel>Url Foto</ng-template>
+              <mat-form-field appearance="fill">
+                <mat-label>Url Foto</mat-label>
+                <input  matInput placeholder="Insira a URL da sua foto" formControlName="urlFoto" required>
+              </mat-form-field>
+              <div>
+                <button mat-button matStepperPrevious><mat-icon class="mat-18">arrow_back</mat-icon></button>
+                <button mat-button matStepperNext><mat-icon class="mat-18">arrow_forward</mat-icon></button>
+              </div>
+            </form>
+          </mat-step>
           <mat-step>
             <ng-template matStepLabel>Feito</ng-template>
             <h3 *ngIf="formularioCadastro.valid">Clique em cadastrar.</h3>
