@@ -32,6 +32,11 @@
       <a routerLink="/">
         <img class="small-icon" mat-card-sm-image [width]="lIcone" [height]="aIcone" [src]="iconeGeral">
       </a>
+      <button  class="btAjuda" routerLink="ajuda">
+        <span class="texto">Ajuda</span>
+        <mat-icon> live_help</mat-icon>
+
+      </button>
       <button (click)="trocaCor()" class="trocaDeCor">
         <span class="material-icons">cached</span>
         <span class="texto">Clique para alterar a cor</span>

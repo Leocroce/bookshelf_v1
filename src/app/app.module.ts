@@ -47,6 +47,7 @@ import { TeatroComponent } from './teatro/teatro.component';
 import { TecnologiaComponent } from './tecnologia/tecnologia.component';
 import { MaisVendidosComponent } from './mais-vendidos/mais-vendidos.component';
 import { AppRecuperarSenhaComponent } from './app-recuperar-senha/app-recuperar-senha.component';
+import { AjudaComponent } from './ajuda/ajuda.component';
 
 @NgModule({
   declarations: [
@@ -70,6 +71,7 @@ import { AppRecuperarSenhaComponent } from './app-recuperar-senha/app-recuperar-
     TecnologiaComponent,
     MaisVendidosComponent,
     AppRecuperarSenhaComponent,
+    AjudaComponent,
   ],
   imports: [
     BrowserModule,
