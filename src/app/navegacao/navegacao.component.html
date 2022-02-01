@@ -1,16 +1,26 @@
 <mat-sidenav-container class="sidenav-container">
   <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
     [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ | async) === false">
-    <a  routerLink="/">
-      <img mat-card-image [src]="logoMenu" alt="Imagem do logo no menu">
-    </a>
+      <a  routerLink="/">
+        <img mat-card-image [src]="logoMenu" alt="Imagem do logo no menu">
+      </a>
     <div >
       <button color="accent" mat-raised-button *ngIf="usuario$ | async as usuario">
         <mat-icon>account_circle</mat-icon> {{usuario.email}}
       </button>
     </div>
     <mat-nav-list *ngFor="let itemMenu of itensMenu$ | async; index as i">
-      <a mat-list-item *ngIf="itemMenu.hab === true" [href]="itemMenu.linkMenu">{{itemMenu.labelMenu}}</a>
+        <a mat-list-item *ngIf="itemMenu.hab === true && itemMenu.labelMenu !== 'Categorias'" [href]="itemMenu.linkMenu">{{itemMenu.labelMenu}}</a>
+        <a mat-list-item *ngIf="itemMenu.labelMenu === 'Categorias' && itemMenu.hab === true" [matMenuTriggerFor]="meuMenu">Categorias</a>
+
+        <mat-menu #meuMenu="matMenu">
+        <a routerLink="/artes" mat-menu-item>Artes</a>
+        <a routerLink="/direito" mat-menu-item>Direito</a>
+        <a routerLink="/empreendedorismo" mat-menu-item>Empreendedorismo</a>
+        <a routerLink="/psicologia" mat-menu-item>Psicologia</a>
+        <a routerLink="/tecnologia" mat-menu-item>Tecnologia</a>
+        <a routerLink="/teatro" mat-menu-item>Teatro</a>
+        </mat-menu>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
