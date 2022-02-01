@@ -1,8 +1,9 @@
 <mat-card class="example-card">
+  <img mat-card-avatar *ngIf="usuario$ | async as usuario" [src]="usuario.photoURL" alt="foto de perfil">
+  <hr/>
   <mat-nav-list *ngFor="let itemPerfil of itensPerfil$ | async; index as i">
     <h1 mat-list-item *ngIf="itemPerfil.habP === true">{{itemPerfil.labelMenu}} do Usuário</h1>
   </mat-nav-list>
-  <hr>
   <mat-card>
     <h2 class="mat-h2" *ngIf="usuario$ | async as usuario">Bem vindo de volta {{ usuario.displayName }}!</h2>
     <h4>
@@ -10,6 +11,6 @@
     </h4>
   </mat-card>
   <mat-card>
-    <mat-card-title>Seu Email: </mat-card-title>
+    <mat-card-title *ngIf="usuario$ | async as usuario">Seu Email: {{usuario.email}}</mat-card-title>
   </mat-card>
 </mat-card>
