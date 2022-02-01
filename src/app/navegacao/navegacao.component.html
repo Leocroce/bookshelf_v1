@@ -4,17 +4,19 @@
     <a routerLink="/">
       <img mat-card-image [src]="logoMenu" alt="Imagem do logo no menu">
     </a>
-    <div>
-      <button color="accent" mat-raised-button *ngIf="usuario$ | async as usuario">
+    <div >
+      <mat-toolbar color="{{toolbarCor}}">
+      <button type="button" *ngIf="usuario$ | async as usuario">
         <mat-icon>account_circle</mat-icon> {{usuario.email}}
       </button>
+    </mat-toolbar>
     </div>
     <mat-nav-list *ngFor="let itemMenu of itensMenu$ | async; index as i">
       <a mat-list-item *ngIf="itemMenu.hab === true" [href]="itemMenu.linkMenu">{{itemMenu.labelMenu}}</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
-    <mat-toolbar color="primary">
+    <mat-toolbar color="{{toolbarCor}}">
       <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()"
         *ngIf="isHandset$ | async">
         <mat-icon aria-label="Menu BookShelf Lateral">menu</mat-icon>
@@ -22,6 +24,10 @@
       <a routerLink="/">
         <img mat-card-sm-image [width]="lIcone" [height]="aIcone" [src]="iconeGeral">
       </a>
+      <button (click)="trocaCor()" class="trocaDeCor">
+        <span class="material-icons">cached</span>
+        <span class="texto">Clique para alterar a cor</span>
+      </button>
       <ng-container *ngIf="usuario$ | async as usuario; else botaoLogin">
         <ng-container ></ng-container>
         <button mat-raised-button color="primary" [matMenuTriggerFor]="usuarioMenu">

@@ -31,6 +31,10 @@ export class NavegacaoComponent {
       map(result => result.matches),
       shareReplay()
     );
+
+  toolbarCor: string = 'accent'
+  toolbarBoolean: boolean = true
+
   constructor(
     private breakpointObserver: BreakpointObserver,
     private telaLogin: MatDialog,
@@ -64,5 +68,14 @@ export class NavegacaoComponent {
       .subscribe(() =>{
         this.rotas.navigate([''])
       })
+    }
+
+    trocaCor() {
+      if(this.toolbarCor === 'primary') {
+        this.toolbarCor = 'accent'
+      } else {
+        this.toolbarCor = 'primary'
+      }
+      this.toolbarBoolean = !this.toolbarBoolean;
     }
 }
