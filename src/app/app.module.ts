@@ -44,6 +44,7 @@ import { PsicologiaComponent } from './psicologia/psicologia.component';
 import { ArtesComponent } from './artes/artes.component';
 import { SugestoesComponent } from './sugestoes/sugestoes.component';
 import { TeatroComponent } from './teatro/teatro.component';
+import { TecnologiaComponent } from './tecnologia/tecnologia.component';
 import { MaisVendidosComponent } from './mais-vendidos/mais-vendidos.component';
 
 @NgModule({
@@ -65,6 +66,7 @@ import { MaisVendidosComponent } from './mais-vendidos/mais-vendidos.component';
     ArtesComponent,
     SugestoesComponent,
     TeatroComponent,
+    TecnologiaComponent,
     MaisVendidosComponent,
   ],
   imports: [

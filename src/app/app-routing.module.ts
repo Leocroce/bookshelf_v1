@@ -15,6 +15,7 @@ import { PsicologiaComponent } from './psicologia/psicologia.component';
 import { ArtesComponent } from './artes/artes.component';
 import { SugestoesComponent } from './sugestoes/sugestoes.component';
 import { TeatroComponent } from './teatro/teatro.component';
+import { TecnologiaComponent } from './tecnologia/tecnologia.component';
 import { MaisVendidosComponent } from './mais-vendidos/mais-vendidos.component';
 
 const enviarSemLogin = () => redirectUnauthorizedTo(['/app-app-cadastro']);
@@ -72,6 +73,10 @@ const routes: Routes = [
   },
   {
     path: 'teatro', component: TeatroComponent,
+    ...canActivate(enviarSemLogin)
+  },
+  {
+    path: 'tecnologia', component: TecnologiaComponent,
     ...canActivate(enviarSemLogin)
   },
   {
