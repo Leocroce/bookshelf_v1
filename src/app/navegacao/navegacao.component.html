@@ -5,11 +5,9 @@
       <img mat-card-image [src]="logoMenu" alt="Imagem do logo no menu">
     </a>
     <div >
-      <mat-toolbar color="{{toolbarCor}}">
-      <button type="button" *ngIf="usuario$ | async as usuario">
+      <button color="accent" mat-raised-button *ngIf="usuario$ | async as usuario">
         <mat-icon>account_circle</mat-icon> {{usuario.email}}
       </button>
-    </mat-toolbar>
     </div>
     <mat-nav-list *ngFor="let itemMenu of itensMenu$ | async; index as i">
       <a mat-list-item *ngIf="itemMenu.hab === true" [href]="itemMenu.linkMenu">{{itemMenu.labelMenu}}</a>
@@ -30,7 +28,7 @@
       </button>
       <ng-container *ngIf="usuario$ | async as usuario; else botaoLogin">
         <ng-container ></ng-container>
-        <button mat-raised-button color="primary" [matMenuTriggerFor]="usuarioMenu">
+        <button mat-raised-button color="{{toolbarCor}}" [matMenuTriggerFor]="usuarioMenu">
           <img class="fotoPerfil" src= {{usuario.photoURL}} alt="foto de perfil">
           {{usuario.displayName}}
           <mat-icon>expand_more</mat-icon>
