@@ -1,0 +1,33 @@
+<mat-card>
+  <div *ngIf=" Teatro$ | async as Teatro; else loading;">
+    <mat-toolbar color="accent">
+        <mat-icon>theater_comedy</mat-icon>
+      <h1> Os 10 melhores livros de Teatro</h1>
+    </mat-toolbar>
+    <table mat-table [dataSource]="Teatro" class="mat-elevation-z8">
+
+      <ng-container matColumnDef="titulo">
+        <th mat-header-cell *matHeaderCellDef >#Título</th>
+        <td mat-cell *matCellDef="let teatro"> {{ teatro.titulo }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="autor">
+        <th mat-header-cell *matHeaderCellDef>#Autor</th>
+        <td mat-cell *matCellDef="let teatro"> {{ teatro.autor }} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="img">
+        <th mat-header-cell *matHeaderCellDef>#Capa</th>
+        <td mat-cell *matCellDef="let teatro"> <img class="imagem" src="{{ teatro.img }}" height="200px" width="150px" alt="{{teatro.titulo}}"></td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="visaoColunas"></tr>
+      <tr mat-row *matRowDef="let row; columns: visaoColunas;"></tr>
+    </table>
+  </div>
+  <ng-template #loading>
+    <div class="loading-spinner">
+      <mat-spinner></mat-spinner>
+    </div>
+  </ng-template>
+</mat-card>
