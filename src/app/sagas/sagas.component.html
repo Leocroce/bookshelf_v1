@@ -1,5 +1,34 @@
+<div class="search-area">
+  <h2 class="mat-2">Buscar</h2>
+  <p>
+    <mat-form-field class="buscar" appearance="fill">
+      <mat-label>Procurar</mat-label>
+      <input matInput #buscarInput/>
+      <mat-icon matSuffix>search</mat-icon>
+    </mat-form-field>
+  </p>
+  <div *ngIf="resultado$ | async as resultadoBusca">
+    <mat-card class="resultado">
+      <mat-card-header>
+        <mat-card-title>Resultado da busca: </mat-card-title>
+      </mat-card-header>
+      <div class="cartaoBusca">
+        <mat-card-header>
+          <mat-card-title>{{resultadoBusca.titulo}}</mat-card-title>
+          <mat-card-subtitle>{{resultadoBusca.autor}}</mat-card-subtitle>
+          <img  [src]="resultadoBusca.img" [alt]="resultadoBusca.titulo">
+        </mat-card-header>
+        <button mat-raised-button color="primary" (click)="irParaDetalhes(resultadoBusca.id, resultadoBusca)">
+         Detalhes
+        </button>
+      </div>
+    </mat-card>
+  </div>
+<mat-card>
 <div class="grid-container">
   <h1 class="mat-h1" *ngIf="usuario$ | async as usuario">10 principais sagas da literatura</h1>
+  <h1 class="mat-h1" *ngIf="resultado$ | async as resultadoBusca">{{resultadoBusca.titulo}}</h1>
+  <div class="search-area">
   <mat-grid-list cols="2" rowHeight="350px">
     <mat-grid-tile *ngFor="let card of cardsSagas$ | async" [colspan]="card.cols" [rowspan]="card.rows">
       <mat-card class="dashboard-card">

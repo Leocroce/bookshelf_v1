@@ -1,4 +1,4 @@
-import { first, tap } from 'rxjs';
+import { first, tap, delay, map, Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Sagas } from '../modelosInterface/sagas';
@@ -23,4 +23,12 @@ export class SagasService {
       tap(apiSagas => apiSagas)
     )
   }
+
+  buscar(busca: string){
+    return this.cardsSagas.get<Sagas[]>(this.uriAPI)
+    .pipe(
+      map((data) => data.find(b => (b.titulo.toLocaleLowerCase()).startsWith(busca.toLocaleLowerCase())))
+    )
+  }
+
 }
