@@ -16,12 +16,13 @@
           <input matInput placeholder="Entre com senha" formControlName="senha" type="password">
           <mat-error *ngIf="senha?.errors?.['required']">Esqueceu a senha</mat-error>
         </mat-form-field>
-        <mat-card-footer>
+        <mat-card-footer class="recuperar">
           <button mat-raised-button color="accent" type="submit" *ngIf="tentativa < 3">Entrar</button>
           <button mat-raised-button mat-dialog-close color="primary">Fechar</button>
           <button mat-raised-button color="accent" type="button" (click)="loginWithGoogle()">
             Entre com Google
           </button>
+          <button mat-raised-button mat-dialog-close color="primary" type="button" (click)="recuperarSenha()">Recuperar Senha</button>
         </mat-card-footer>
       </form>
       <small *ngIf="tentativa > 0">Tentativas de Login: <b>{{ tentativa }} </b></small>
