@@ -20,7 +20,6 @@ export function passwordMatchValidator(): ValidatorFn {
   }
 }
 
-
 @Component({
   selector: 'app-app-cadastro',
   templateUrl: './app-cadastro.component.html',
