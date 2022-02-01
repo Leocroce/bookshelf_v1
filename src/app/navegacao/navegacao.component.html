@@ -4,6 +4,11 @@
     <a routerLink="/">
       <img mat-card-image [src]="logoMenu" alt="Imagem do logo no menu">
     </a>
+    <div>
+      <button color="accent" mat-raised-button *ngIf="usuario$ | async as usuario">
+        <mat-icon>account_circle</mat-icon> {{usuario.email}}
+      </button>
+    </div>
     <mat-nav-list *ngFor="let itemMenu of itensMenu$ | async; index as i">
       <a mat-list-item *ngIf="itemMenu.hab === true" [href]="itemMenu.linkMenu">{{itemMenu.labelMenu}}</a>
     </mat-nav-list>
