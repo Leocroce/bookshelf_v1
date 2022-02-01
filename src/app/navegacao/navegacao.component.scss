@@ -45,3 +45,17 @@
 .trocaDeCor:hover {
   font-weight: bold;
 }
+
+@media only screen and (max-width: 800px) {
+  .small-icon {
+    display: none;
+  }
+
+  .menuDown {
+    width: 100px;
+
+    .nameUser {
+      display: none;
+    }
+  }
+}
