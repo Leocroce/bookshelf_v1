@@ -24,7 +24,33 @@
       </mat-card>
     </div>
   </mat-tab>
-  
+  <mat-tab label="Como realizar login">
+    <div class="example-large-box mat-elevation-z4">
+      <h1>Como realizar login</h1>
+      <mat-card class="cards">
+        <mat-card-content>
+          <div>
+              <div>
+                <img mat-card-image src="../../assets/imagens/Passo a passo para login.png" alt="Passo a passo cadastro">
+              </div>
+            <h3>Como realizar login:</h3>
+            <ol>
+              <li>Preencher o campo <b>E-mail</b>; </li>
+              <li>Preencher o campo <b>Senha</b>;  e clicar em <b>avançar</b>;</li>
+              <li>Clicar em  <b>Entrar</b>;
+            </ol>
+            <h3>Como realizar login com a conta  <b>Google</b>:</h3>
+            <ol>
+              <li>Clicar no botão  <b>Entre com Google</b>; </li>
+              <li>Escolha a conta da google que será utilizada;</li>
+              <li>Clicar em  <b>Entrar</b>;
+            </ol>
+            <button mat-button color="accent"(click)="abrirLogin('Tela de Login')">Ir para Login</button>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </mat-tab>
 </mat-tab-group>
 
 
