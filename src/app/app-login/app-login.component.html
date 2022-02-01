@@ -19,6 +19,9 @@
         <mat-card-footer>
           <button mat-raised-button color="accent" type="submit" *ngIf="tentativa < 3">Entrar</button>
           <button mat-raised-button mat-dialog-close color="primary">Fechar</button>
+          <button mat-raised-button color="accent" type="button" (click)="loginWithGoogle()">
+            Entre com Google
+          </button>
         </mat-card-footer>
       </form>
       <small *ngIf="tentativa > 0">Tentativas de Login: <b>{{ tentativa }} </b></small>
