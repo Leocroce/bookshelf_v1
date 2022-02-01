@@ -1,6 +1,6 @@
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
-import { Component, OnInit } from '@angular/core';
-import { catchError, map, Observable, of } from 'rxjs';
+import { Component, ElementRef, OnInit, ViewChild, AfterViewInit } from '@angular/core';
+import { catchError, map, Observable, of, filter, debounceTime, distinctUntilChanged, tap, fromEvent } from 'rxjs';
 
 import { Sugestoes } from '../modelosInterface/sugestoes';
 import { AutenticacaoFirebaseService } from '../servicosInterface/autenticacao-firebase.service';
@@ -11,9 +11,10 @@ import { SugestoesService } from './../servicosInterface/sugestoes.service';
   templateUrl: './sugestoes.component.html',
   styleUrls: ['./sugestoes.component.scss']
 })
-export class SugestoesComponent implements OnInit {
+export class SugestoesComponent implements OnInit, AfterViewInit {
 
-  listaLivrosSugestoes$: Observable<Sugestoes[]>;
+  resultado$!: Observable<Sugestoes | undefined>
+  listaLivrosSugestoes$: Observable<Sugestoes[]>
 
   usuario$ = this.autenticacaoFirebaseService.usuarioLogado$;
   listaLivrosSugestoes = this.breakpointObserver.observe(Breakpoints.Handset).pipe(
@@ -25,6 +26,7 @@ export class SugestoesComponent implements OnInit {
     })
   );
 
+  @ViewChild('searchInput') searchInput!: ElementRef;
 
   constructor(
     private breakpointObserver: BreakpointObserver,
@@ -39,6 +41,22 @@ export class SugestoesComponent implements OnInit {
   }
 
   ngOnInit(): void {
+  }
+
+  ngAfterViewInit(): void {
+    fromEvent(this.searchInput.nativeElement, 'keyup')
+      .pipe(
+        filter(Boolean),
+        debounceTime(400),
+        distinctUntilChanged(),
+        tap(() => {
+          const query = this.searchInput.nativeElement.value;
+          if (query) {
+            this.resultado$ = this.sugestoesService.pesquisarSugestoes(query);
+          }
+        })
+      )
+      .subscribe(console.log);
   }
 
 }

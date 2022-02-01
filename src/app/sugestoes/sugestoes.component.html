@@ -1,25 +1,51 @@
-<div class="grid-container">
+<div class="search-area">
+  <!-- INPUT DE PESQUISA -->
+  <p>
+    <mat-form-field class="buscar" appearance="fill">
+      <mat-label>Procurar</mat-label>
+      <input matInput #searchInput />
+      <mat-icon matSuffix>search</mat-icon>
+    </mat-form-field>
+  </p>
+
+  <!-- GRID -->
   <mat-grid-list cols="2">
-    <h1 class="mat-h1" *ngIf="usuario$ | async as usuario">
-      Sugestões de Livros
-    </h1>
-    <!-- GRID 1 -->
-    <mat-grid-tile
-      *ngFor="let listaLivrosSugestoes of listaLivrosSugestoes$ | async"
-    >
+    <!-- RESULTADO PESQUISA -->
+    <div *ngIf="resultado$ | async as resultado">
+      <!-- TÍTULO -->
+      <h1 class="mat-h1">Resultado da pesquisa</h1>
+      <mat-grid-tile>
+        <!-- CARD 1 -->
+        <mat-card class="example-card">
+          <mat-card-title-group>
+            <mat-card-title>{{ resultado.titulo }}</mat-card-title>
+            <mat-card-subtitle>{{ resultado.autor }}</mat-card-subtitle>
+            <img width="250px" mat-card-xl-image src="{{ resultado.img }}" />
+          </mat-card-title-group>
+          <mat-card-content>
+            {{ resultado.sinopse }}
+          </mat-card-content>
+        </mat-card>
+      </mat-grid-tile>
+    </div>
+  </mat-grid-list>
+</div>
+
+<div *ngIf="listaLivrosSugestoes$ | async as Sugestoes">
+  <!-- TÍTULO -->
+  <h1 class="mat-h1">Sugestões de Livros</h1>
+  <!-- GRID -->
+  <mat-grid-list cols="2">
+    <mat-grid-tile *ngFor="let cards of listaLivrosSugestoes$ | async">
       <!-- CARD 1 -->
       <mat-card class="example-card">
         <mat-card-title-group>
-          <mat-card-title>{{ listaLivrosSugestoes.titulo }}</mat-card-title>
-          <mat-card-subtitle>listaLivrosSugestoes.autor</mat-card-subtitle>
-          <img
-            width="250px"
-            mat-card-xl-image
-            src="{{ listaLivrosSugestoes.img }}"
-          />
+          <mat-card-title>{{ cards.titulo }}</mat-card-title>
+          <mat-card-subtitle>{{ cards.autor }}</mat-card-subtitle>
+          <img width="250px" mat-card-xl-image src="{{ cards.img }}" />
         </mat-card-title-group>
         <mat-card-content>
-          {{ listaLivrosSugestoes.sinopse }}
+          {{ cards.sinopse }}
         </mat-card-content>
       </mat-card>
     </mat-grid-tile>
