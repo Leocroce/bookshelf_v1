@@ -42,6 +42,7 @@ import { EmpreendedorismoComponent } from './empreendedorismo/empreendedorismo.c
 import { DireitoComponent } from './direito/direito.component';
 import { PsicologiaComponent } from './psicologia/psicologia.component';
 import { ArtesComponent } from './artes/artes.component';
+import { SugestoesComponent } from './sugestoes/sugestoes.component';
 
 @NgModule({
   declarations: [
@@ -60,6 +61,7 @@ import { ArtesComponent } from './artes/artes.component';
     DireitoComponent,
     PsicologiaComponent,
     ArtesComponent,
+    SugestoesComponent,
   ],
   imports: [
     BrowserModule,

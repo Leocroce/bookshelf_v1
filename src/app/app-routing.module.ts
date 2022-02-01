@@ -13,6 +13,7 @@ import { EmpreendedorismoComponent } from './empreendedorismo/empreendedorismo.c
 import { DireitoComponent } from './direito/direito.component';
 import { PsicologiaComponent } from './psicologia/psicologia.component';
 import { ArtesComponent } from './artes/artes.component';
+import { SugestoesComponent } from './sugestoes/sugestoes.component';
 
 const enviarSemLogin = () => redirectUnauthorizedTo(['/app-app-cadastro']);
 
@@ -61,6 +62,10 @@ const routes: Routes = [
   },
   {
     path: 'artes', component: ArtesComponent,
+    ...canActivate(enviarSemLogin)
+  },
+  {
+    path: 'sugestoes', component: SugestoesComponent,
     ...canActivate(enviarSemLogin)
   },
   {
