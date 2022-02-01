@@ -1,3 +1,5 @@
+import { GoogleAuthProvider } from 'firebase/auth';
+import { signInWithPopup } from 'firebase/auth';
 import { Injectable } from '@angular/core';
 import { Auth } from '@angular/fire/auth';
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile } from 'firebase/auth';
@@ -17,6 +19,10 @@ export class AutenticacaoFirebaseService {
 
     loginUsuario(usuarioEmail: string, usuarioSenha: string){
       return from(signInWithEmailAndPassword(this.usuarioFb, usuarioEmail, usuarioSenha));
+    }
+
+    loginWithGoogle() {
+      return signInWithPopup(this.usuarioFb, new GoogleAuthProvider());
     }
 
     sairLogin(){

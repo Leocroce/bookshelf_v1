@@ -30,7 +30,7 @@ export class AppLoginComponent {
     private telaLogin: MatDialog,
     private toast: HotToastService,
     private rotas: Router,
-    private autenticacaoFirebaseService: AutenticacaoFirebaseService
+    private autenticacaoFirebaseService: AutenticacaoFirebaseService,
   ) {}
 
   get email() {
@@ -83,5 +83,17 @@ export class AppLoginComponent {
   resolveRecaptcha(resposta: string) {
     this.captcha = resposta;
     this.tentativa = 0;
+  }
+
+  loginWithGoogle() {
+    this.autenticacaoFirebaseService
+    .loginWithGoogle()
+    .then(() => this.rotas.navigate(['/cdd']))
+    .catch((e) => console.log(e.message));
+    this.telaLogin.closeAll();
+    this.toast.loading('Redirecionando...', {
+      duration: 4000
+    }),
+    this.toast.success('Login válido, obrigado')
   }
 }
