@@ -96,4 +96,8 @@ export class AppLoginComponent {
     }),
     this.toast.success('Login válido, obrigado')
   }
+
+  recuperarSenha() {
+    this.rotas.navigate(['/recuperar'])
+  }
 }

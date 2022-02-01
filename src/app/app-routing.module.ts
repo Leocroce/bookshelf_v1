@@ -1,3 +1,4 @@
+import { AppRecuperarSenhaComponent } from './app-recuperar-senha/app-recuperar-senha.component';
 import { IsbnComponent } from './isbn/isbn.component';
 import { DetalheSagaComponent } from './detalhe-saga/detalhe-saga.component';
 import { SagasComponent } from './sagas/sagas.component';
@@ -82,6 +83,9 @@ const routes: Routes = [
   {
     path: 'mais-vendidos', component: MaisVendidosComponent,
     ...canActivate(enviarSemLogin)
+  },
+  {
+    path: 'recuperar', component: AppRecuperarSenhaComponent,
   },
   {
     path: 'cdd',
