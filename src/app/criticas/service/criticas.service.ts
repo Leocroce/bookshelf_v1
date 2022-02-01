@@ -1,4 +1,4 @@
-import { first, tap, delay } from 'rxjs';
+import { first, map, tap } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Criticas } from '../modelos/criticas';
@@ -17,6 +17,14 @@ export class CriticasService {
     .pipe(
       first(),
       tap(apiCriticas => console.log(apiCriticas))
+    )
+  }
+
+  listarCritica(titulo: string) {
+    return this.criticas.get<Criticas[]>(this.urlAPI)
+    .pipe(
+      first(),
+      map(crit => crit.find(crit => crit.titulo === titulo))
     )
   }
 }
