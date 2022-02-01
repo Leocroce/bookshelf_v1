@@ -50,6 +50,13 @@
   font-size: 1.3rem;
 }
 
+.mat-divider {
+  margin: 0;
+  border-top-style: inset;
+  border-top-width: 2px;
+  border-top-color: black;
+}
+
 .buscar {
   margin: 15px 5% 0 5%;
   width: 90%;
