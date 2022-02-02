@@ -1,0 +1,18 @@
+<mat-card>
+<div class="grid-container" *ngIf="cardsBiblioteconomia$ | async as Biblioteconomia">
+  <h1 class="mat-h1">Biblioteconomia</h1>
+  <mat-grid-list cols="3" rowHeight="500px">
+    <mat-grid-tile *ngFor="let card of cardsBiblioteconomia$ | async" [colspan]="card.cols" [rowspan]="card.rows">
+      <mat-card class="dashboard-card">
+        <mat-card-header>
+          <mat-card-title>{{card.titulo}}</mat-card-title>
+          <mat-card-subtitle>{{card.autor}}</mat-card-subtitle>
+          <img mat-card-avatar [src]="card.img" [alt]="card.titulo">
+        </mat-card-header>
+        <mat-card-content class="dashboard-card-content">
+          <div>{{card.sinopse}}</div>
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
