@@ -104,6 +104,11 @@ const routes: Routes = [
     ...canActivate(enviarSemLogin)
   },
   {
+    path: 'biblioteconomia',
+    loadChildren: () => import('./biblioteconomia/biblioteconomia.module').then(c => c.BiblioteconomiaModule),
+    ...canActivate(enviarSemLogin)
+  },
+  {
     path: '**', component: AppNotFoundComponent,
   },
 ];

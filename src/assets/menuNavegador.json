@@ -6,6 +6,7 @@
   {"linkMenu": "/isbn", "labelMenu":"ISBN", "hab": true, "habP": false},
   {"linkMenu": "/especial", "labelMenu":"Especial do Mês", "hab": true, "habP": false},
   {"linkMenu": "/criticas", "labelMenu":"Críticas", "hab": true, "habP": false},
+  {"linkMenu": "/biblioteconomia", "labelMenu":"Biblioteconomia", "hab": true, "habP": false},
   {"linkMenu": "/sugestoes", "labelMenu":"Sugestões", "hab": true, "habP": false},
   {"linkMenu": "/mais-vendidos", "labelMenu":"Mais vendidos", "hab": true, "habP": false},
   {"linkMenu": "", "labelMenu":"Categorias", "hab": true, "habP": false},

@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { first, tap } from 'rxjs';
-import { Biblioteconomia } from './../modelosInterface/biblioteconomia';
+import { Biblioteconomia } from './../biblioteconomia/modelos/biblioteconomia';
 
 @Injectable({
   providedIn: 'root'
