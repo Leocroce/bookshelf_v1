@@ -91,7 +91,6 @@ const routes: Routes = [
   },
   {
     path: 'ajuda', component: AjudaComponent,
-    ...canActivate(enviarSemLogin)
   },
   {
     path: 'cdd',
@@ -101,11 +100,6 @@ const routes: Routes = [
   {
     path: 'criticas',
     loadChildren: () => import('./criticas/criticas.module').then(c => c.CriticasModule),
-    ...canActivate(enviarSemLogin)
-  },
-  {
-    path: 'biblioteconomia',
-    loadChildren: () => import('./biblioteconomia/biblioteconomia.module').then(c => c.BiblioteconomiaModule),
     ...canActivate(enviarSemLogin)
   },
   {
