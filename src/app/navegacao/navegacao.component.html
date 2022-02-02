@@ -10,6 +10,7 @@
       </button>
     </div>
     <mat-nav-list *ngFor="let itemMenu of itensMenu$ | async; index as i">
+      <mat-divider></mat-divider>
         <a mat-list-item *ngIf="itemMenu.hab === true && itemMenu.labelMenu !== 'Categorias'" [href]="itemMenu.linkMenu">{{itemMenu.labelMenu}}</a>
         <a mat-list-item *ngIf="itemMenu.labelMenu === 'Categorias' && itemMenu.hab === true" [matMenuTriggerFor]="meuMenu">Categorias</a>
 
