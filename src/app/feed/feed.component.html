@@ -38,7 +38,7 @@
   <h1 class="mat-h1" *ngIf="usuario$ | async as usuario">
     Seja Bem vindo(a) {{ usuario.displayName }}!
   </h1>
-  <mat-grid-list cols="3" rowHeight="100px">
+  <mat-grid-list cols="10" rowHeight="100px">
     <mat-grid-tile
       *ngFor="let card of cards$ | async"
       [colspan]="card.cols"
@@ -50,12 +50,12 @@
           <mat-card-title>{{ card.titulo }}</mat-card-title>
           <mat-card-subtitle>{{ card.subtitulo }}</mat-card-subtitle>
         </mat-card-header>
-        <img mat-card-image [src]="card.img" [alt]="card.titulo" />
+        <img mat-card-image [src]="card.img" [alt]="" />
         <mat-card-content class="dashboard-card-content">
           <div>{{ card.conteudo }}</div>
         </mat-card-content>
-        <mat-nav-list>
-          <mat-list-item *ngFor="let link of card.link">
+        <mat-nav-list class="footer">
+          <mat-list-item class="links" *ngFor="let link of card.link">
             <a matLine [href]="link.ref">{{ link.texto }}</a>
             <button mat-icon-button>
               <mat-icon>info</mat-icon>
@@ -66,6 +66,104 @@
       </mat-card>
     </mat-grid-tile>
   </mat-grid-list>
+  <mat-tab-group dynamicHeight>
+    <mat-tab class="tabtitle" label="Filosofia e Psicologia">
+      <div class="example-large-box mat-elevation-z4">
+        <h1 class="titulotab">Melhores Livros de Psicologia</h1>
+        <mat-card class="cards">
+          <mat-card-content>
+            <div>
+                <div>
+                  <a routerLink="/psicologia">
+                    <img class="tabimg" mat-card-image src="https://static.wixstatic.com/media/7e054b_963fa417af5c47639de4fc7527ec8b52~mv2.png" alt="Passo a passo cadastro">
+                  </a>
+                </div>
+            </div>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </mat-tab>
+    <mat-tab class="tabtitle" label="Tecnologia">
+      <div class="example-large-box mat-elevation-z4">
+        <h1 class="titulotab">Melhores livros de Tecnologia</h1>
+        <mat-card class="cards">
+          <mat-card-content>
+            <div>
+                <div>
+                  <a routerLink="/tecnologia">
+                    <img mat-card-image src="https://images.pexels.com/photos/46168/space-telescope-mirror-segments-james-webb-cosmos-46168.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260" alt="Passo a passo cadastro">
+                  </a>
+                </div>
+            </div>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </mat-tab>
+    <mat-tab class="tabtitle" label="Empreendedorismo">
+      <div class="example-large-box mat-elevation-z4">
+        <h1 class="titulotab">Melhores livros de Empreendedorismo</h1>
+        <mat-card class="cards">
+          <mat-card-content>
+            <div>
+                <div>
+                  <a routerLink="/empreendedorismo">
+                    <img mat-card-image src="https://images.pexels.com/photos/7413915/pexels-photo-7413915.jpeg?cs=srgb&dl=pexels-rodnae-productions-7413915.jpg&fm=jpg" alt="Passo a passo cadastro">
+                  </a>
+                </div>
+            </div>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </mat-tab>
+    <mat-tab class="tabtitle" label="Direito">
+      <div class="example-large-box mat-elevation-z4">
+        <h1 class="titulotab">Melhores livros de Direito</h1>
+        <mat-card class="cards">
+          <mat-card-content>
+            <div>
+                <div>
+                  <a routerLink="/direito">
+                    <img mat-card-image src="https://images.pexels.com/photos/613508/pexels-photo-613508.jpeg?cs=srgb&dl=pexels-cqfavocat-613508.jpg&fm=jpg" alt="Passo a passo cadastro">
+                  </a>
+                </div>
+            </div>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </mat-tab>
+    <mat-tab class="tabtitle" label="Teatro">
+      <div class="example-large-box mat-elevation-z4">
+        <h1 class="titulotab">Melhores livros de Teatro</h1>
+        <mat-card class="cards">
+          <mat-card-content>
+            <div>
+                <div>
+                  <a routerLink="/teatro">
+                    <img mat-card-image src="https://images.pexels.com/photos/45258/ballet-production-performance-don-quixote-45258.jpeg?cs=srgb&dl=pexels-pixabay-45258.jpg&fm=jpg" alt="Passo a passo cadastro">
+                  </a>
+                </div>
+            </div>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </mat-tab>
+    <mat-tab class="tabtitle" label="Artes">
+      <div class="example-large-box mat-elevation-z4">
+        <h1 class="titulotab">Melhores livros de Artes</h1>
+        <mat-card class="cards">
+          <mat-card-content>
+            <div>
+                <div>
+                  <a routerLink="/artes">
+                    <img mat-card-image src="https://images.pexels.com/photos/1839919/pexels-photo-1839919.jpeg?cs=srgb&dl=pexels-julio-nery-1839919.jpg&fm=jpg" alt="Passo a passo cadastro">
+                  </a>
+                </div>
+            </div>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </mat-tab>
+  </mat-tab-group>
 </div>
 <mat-card>
   <ng-template #loading>
