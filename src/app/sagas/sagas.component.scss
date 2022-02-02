@@ -1,16 +1,16 @@
+
 .grid-container {
   margin: 20px;
-  max-width: 1080px;
+  max-width: 1380px;
   margin-left: auto;
   margin-right: auto;
+  box-sizing: border-box;
 }
 
-.dashboard-card {
-  position: absolute;
-  top: 15px;
-  left: 15px;
-  right: 15px;
-  bottom: 15px;
+
+
+.example-card {
+  margin-bottom: 8px;
 }
 
 .more-button {
@@ -29,6 +29,18 @@
   justify-content: center;
   align-items: stretch;
 }
+
+.mat-h1{
+  text-align: center;
+  color: #7E56C2
+}
+
+.mat-card-title {
+  font-size: 1.6rem;
+  line-height: 25px;
+}
+
+
 .resultado {
   width: 400px;
   margin: 20px auto;
