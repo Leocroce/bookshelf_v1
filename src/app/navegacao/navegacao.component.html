@@ -37,7 +37,7 @@
         <mat-icon> live_help</mat-icon>
 
       </button>
-      <button (click)="trocaCor()" class="trocaDeCor">
+      <button matTooltip="Mudar a cor da tela" (click)="trocaCor()" class="trocaDeCor">
         <span class="material-icons">cached</span>
         <span class="texto">Clique para alterar a cor</span>
       </button>
@@ -50,14 +50,14 @@
         </button>
       </ng-container>
       <ng-template #botaoLogin>
-        <button mat-raised-button color="primary" (click)="abrirLogin('Tela de Login')">
+        <button mat-raised-button matTooltip="Logar na conta" color="primary" (click)="abrirLogin('Tela de Login')">
           <mat-icon class="mat-18">login</mat-icon>
           LOGIN
         </button>
       </ng-template>
     </mat-toolbar>
     <mat-menu #usuarioMenu="matMenu">
-      <button mat-menu-item (click)="sairUsuario()">LOGOUT</button>
+      <button matTooltip="Sair da conta" mat-menu-item (click)="sairUsuario()">LOGOUT</button>
     </mat-menu>
     <router-outlet></router-outlet>
   </mat-sidenav-content>

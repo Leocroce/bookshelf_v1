@@ -13,7 +13,7 @@
           <mat-error *ngIf="email?.errors?.['required']">Será necessário informar um e-mail</mat-error>
           <mat-error *ngIf="email?.errors?.['email']">O formato do e-mail não é valido</mat-error>
         </mat-form-field>
-        <button mat-raised-button color="accent" type="submit">Continuar</button>
+        <button matTooltip="Enviar e-mail para recuperar senha" mat-raised-button color="accent" type="submit">Continuar</button>
         <div>
           <span>Preencha o campo com seu email para prosseguirmos com a recuperação da senha.</span>
         </div>
