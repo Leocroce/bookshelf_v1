@@ -36,7 +36,7 @@
 </div>
 <div class="grid-container" *ngIf="cards$ | async as Dashboard; else loading">
   <h1 class="mat-h1" *ngIf="usuario$ | async as usuario">
-    Seja Bem vindo(a) {{ usuario.displayName }}!
+    Seja bem vindo(a), {{ usuario.displayName }}!
   </h1>
   <mat-grid-list cols="10" rowHeight="100px">
     <mat-grid-tile

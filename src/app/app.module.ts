@@ -48,6 +48,7 @@ import { TecnologiaComponent } from './tecnologia/tecnologia.component';
 import { MaisVendidosComponent } from './mais-vendidos/mais-vendidos.component';
 import { AppRecuperarSenhaComponent } from './app-recuperar-senha/app-recuperar-senha.component';
 import { AjudaComponent } from './ajuda/ajuda.component';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 @NgModule({
   declarations: [
@@ -81,6 +82,7 @@ import { AjudaComponent } from './ajuda/ajuda.component';
     AppMaterialModule,
     LayoutModule,
     MatToolbarModule,
+    MatTooltipModule,
     MatButtonModule,
     MatSidenavModule,
     MatIconModule,

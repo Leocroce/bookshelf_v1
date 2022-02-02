@@ -12,7 +12,7 @@
               <input matInput placeholder="Nome" formControlName="nome" required>
             </mat-form-field>
             <div>
-              <button mat-button matStepperNext>Avançar</button>
+              <button mat-button matTooltip="Seguir para o próximo passo de cadastro" matStepperNext>Avançar</button>
             </div>
           </form>
         </mat-step>
@@ -79,7 +79,7 @@
           </mat-step>
       </mat-stepper>
       <mat-card-footer>
-        <button class="cadastrar" mat-button color="accent" type="submit" *ngIf="formularioCadastro.valid">Cadastrar</button>
+        <button class="cadastrar" matTooltip="Finalizar criação de conta" mat-button color="accent" type="submit" *ngIf="formularioCadastro.valid">Cadastrar</button>
       </mat-card-footer>
     </mat-card>
   </form>

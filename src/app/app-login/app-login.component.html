@@ -17,18 +17,18 @@
           <mat-error *ngIf="senha?.errors?.['required']">Esqueceu a senha</mat-error>
         </mat-form-field>
         <mat-card-footer class="recuperar">
-          <button mat-raised-button color="accent" type="submit" *ngIf="tentativa < 3">Entrar</button>
-          <button mat-raised-button mat-dialog-close color="primary">Fechar</button>
-          <button mat-raised-button color="accent" type="button" (click)="loginWithGoogle()">
+          <button mat-raised-button matTooltip="Entrar na conta" color="accent" type="submit" *ngIf="tentativa < 3">Entrar</button>
+          <button mat-raised-button matTooltip="Fechar acesso ao login" mat-dialog-close color="primary">Fechar</button>
+          <button mat-raised-button matTooltip="Acessar via conta Google" color="accent" type="button" (click)="loginWithGoogle()">
             Entre com Google
           </button>
-          <button mat-raised-button mat-dialog-close color="primary" type="button" (click)="recuperarSenha()">Recuperar Senha</button>
+          <button mat-raised-button matTooltip="Recuperar senha de acesso" mat-dialog-close color="primary" type="button" (click)="recuperarSenha()">Recuperar Senha</button>
         </mat-card-footer>
       </form>
       <small *ngIf="tentativa > 0">Tentativas de Login: <b>{{ tentativa }} </b></small>
     </mat-card-content>
-    <span>Você ainda <strong>não tem cadastro</strong> clique <a routerLink="/app-app-cadastro">aqui</a>
-      e venha fazer parte desta comunidade de leitores</span>
+    <span>Você ainda <strong>não tem cadastro?</strong> <a matDialogClose routerLink="/">Clique aqui</a>
+      e venha fazer parte desta comunidade de leitores.</span>
   </mat-card>
 </div>
 <div class="recaptcha" [hidden]="captcha" *ngIf="tentativa >= 3">
