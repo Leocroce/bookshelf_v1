@@ -8,7 +8,7 @@
     </mat-form-field>
   </p>
   <div *ngIf="resultado$ | async as resultadoBusca">
-    <mat-card class="resultado">
+    <mat-card class="cards">
       <mat-card-header>
         <mat-card-title>Resultado da busca: </mat-card-title>
       </mat-card-header>
@@ -27,29 +27,27 @@
 <mat-card>
 <div class="grid-container">
   <h1 class="mat-h1" *ngIf="usuario$ | async as usuario">10 principais sagas da literatura</h1>
-  <h1 class="mat-h1" *ngIf="resultado$ | async as resultadoBusca">{{resultadoBusca.titulo}}</h1>
-  <div class="search-area">
   <mat-grid-list cols="2" rowHeight="350px">
     <mat-grid-tile *ngFor="let card of cardsSagas$ | async" [colspan]="card.cols" [rowspan]="card.rows">
-      <mat-card class="dashboard-card">
-        <mat-card-header>
-          <div mat-card-avatar class="example-header-image"></div>
-          <mat-card-title>{{card.titulo}}</mat-card-title>
-          <mat-card-subtitle>{{card.autor}}</mat-card-subtitle>
-        </mat-card-header>
-        <img mat-card-image [src]="card.img" height="75%" [alt]="card.titulo">
-        <mat-card-content class="dashboard-card-content">
-          <!-- <div>{{card.conteudo}}</div> -->
-        </mat-card-content>
-        <mat-nav-list>
-          <mat-list-item *ngFor="let link of card.link">
-            <p matLine (click)="irParaDetalhes(card.id, card)" >{{ link.texto }}</p>
-            <button mat-raised-button mat-dialog-close color="primary" (click)="irParaDetalhes(card.id, card)">
-              Detalhes
-            </button>
-          </mat-list-item>
-        </mat-nav-list>
-      </mat-card>
+      <div class="grid-container">
+        <h1 class="mat-h2">Embarque nessa aventura saga:</h1>
+        <mat-grid-list cols="1" rowHeight="500px">
+          <mat-grid-tile [colspan]="1" [rowspan]="1">
+            <mat-card class="dashboard-card">
+              <mat-card-header>
+                <mat-card-title>{{card.titulo}}</mat-card-title>
+                <mat-card-subtitle>{{card.autor}}</mat-card-subtitle>
+                <img  [src]="card.img" [alt]="card.titulo">
+              </mat-card-header>
+              <mat-card-content class="dashboard-card-content">
+              </mat-card-content>
+              <button mat-raised-button mat-dialog-close color="primary" (click)="irParaDetalhes(card.id, card)">
+                Detalhes
+              </button>
+            </mat-card>
+          </mat-grid-tile>
+        </mat-grid-list>
+      </div>
     </mat-grid-tile>
   </mat-grid-list>
 </div>
