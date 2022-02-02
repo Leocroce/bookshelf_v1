@@ -32,6 +32,7 @@ const routes: Routes = [
   {
     path: 'perfil',
     component: PerfilComponent,
+    ...canActivate(enviarSemLogin)
   },
   {
     path: 'feed', component: FeedComponent,
